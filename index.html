@@ -1,391 +1,342 @@
 
 <!DOCTYPE html>
-<html lang="ht" id="htmlRoot">
+<html lang="ht">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080300">
-
-  <title>LÉOGÂNE INFOS | BSS1815 PRO-MAX DMP</title>
-
-  <meta name="description"
-        content="LÉOGÂNE INFOS — Yon vwa ki rasanble nou. Nouvèl, kilti, kominote ak enfòmasyon ant Léogâne, Florida ak dyaspora a.">
-
-  <link rel="icon"
-        type="image/png"
-        href="assets/images/léogâne-infos-II.png">
-
-  <link rel="stylesheet" href="style.css">
-  <script src="javascript.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080300">
+<title>LÉOGÂNE INFOS | BSS1815 PRO-MAX DMP</title>
+<link rel="icon" href="assets/images/léogâne-infos-II.png">
+<style>
+:root{--o:#ff7900;--a:#ffb078;--b:#080300;--g:#ffb52e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(135deg,#080300,#301000,#080300);color:var(--a);font-family:Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font:inherit}
+header{position:sticky;top:0;z-index:10;background:#080300;border-bottom:2px solid var(--o)}
+.bar{max-width:1500px;margin:auto;padding:12px 4%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:70px;height:70px;object-fit:contain}
+.brand strong{display:block;color:var(--o);font-size:24px}
+.brand small{color:var(--g)}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{font-weight:bold}
+nav a:hover{color:var(--o)}
+.languages{display:flex;gap:5px}
+.languages button,.menu,.sound{background:var(--o);color:var(--b);border:0;border-radius:8px;padding:10px;font-weight:bold}
+.languages button:not(.active){background:#170800;color:var(--a);border:1px solid var(--o)}
+.menu{display:none}
+.hero{min-height:550px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;padding:55px 5%;background:radial-gradient(ellipse at center,#552000,#080300 75%)}
+.hero h1{font-size:clamp(42px,6vw,82px);color:var(--o);margin:10px 0}
+.hero h2{color:var(--g)}
+.hero p{font-size:18px;line-height:1.7}
+.btn{display:inline-block;padding:15px 24px;background:var(--o);color:var(--b);border-radius:12px;font-weight:bold;margin-top:15px}
+.media{text-align:center;border:2px solid var(--o);border-radius:20px;background:var(--b);padding:20px}
+.media img{display:block;width:min(220px,65%);margin:0 auto 15px}
+.media video{width:100%;max-height:400px;object-fit:contain}
+.sound{margin-top:12px}
+section{scroll-margin-top:100px}
+.section{padding:60px 5%;border-top:1px solid #974000}
+.section h2{text-align:center;color:var(--o);font-size:clamp(25px,3vw,36px)}
+.intro{text-align:center;max-width:800px;margin:15px auto 30px;line-height:1.7}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1100px;margin:auto}
+.card{background:linear-gradient(130deg,#301200,#080300);border:1px solid var(--o);border-radius:16px;padding:25px}
+.card h3{color:var(--g)}
+.socials{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}
+.social{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;min-height:125px;padding:15px 8px;background:#130700;border:2px solid currentColor;border-radius:15px;font-weight:bold;transition:transform .2s}
+.social:hover{transform:translateY(-5px)}
+.social svg{width:43px;height:43px;fill:currentColor}
+.tiktok{color:#25f4ee}.telegram{color:#2aabee}.facebook{color:#1877f2}.instagram{color:#e1306c}.whatsapp{color:#25d366}.youtube{color:#ff0033}.spotify{color:#1ed760}.linkedin{color:#0a66c2}.x{color:#b9b9b9}.truth{color:#6454ed}
+.phones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.phone{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:22px 8px;border:1px solid var(--o);border-radius:12px;background:#1a0900}
+.phone strong{color:var(--g)}
+footer{text-align:center;padding:40px 15px;border-top:2px solid var(--o);background:var(--b)}
+footer img{width:90px;height:90px;object-fit:contain}
+footer h3,footer strong{color:var(--o)}
+@media(max-width:1050px){
+.menu{display:block}
+nav{display:none;order:4;width:100%;flex-direction:column;padding:15px;border:1px solid var(--o);border-radius:12px}
+nav.open{display:flex}
+}
+@media(max-width:800px){
+.hero{grid-template-columns:1fr;text-align:center}
+.cards{grid-template-columns:1fr}
+.socials,.phones{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:480px){
+.brand strong{font-size:18px}
+.logo{width:55px;height:55px}
+.phones{grid-template-columns:1fr}
+}
+</style>
 </head>
-
 <body>
-
-<!-- HEADER -->
-<header class="site-header">
-  <div class="header-inner">
-
-    <a href="#home" class="brand">
-      <img
-        src="assets/images/léogâne-infos-II.png"
-        alt="Logo ofisyèl LÉOGÂNE INFOS"
-        class="official-logo">
-
-      <div class="brand-text">
-        <strong>LÉOGÂNE INFOS</strong>
-        <small>BSS1815 PRO-MAX DMP</small>
-      </div>
-    </a>
-
-    <button
-      id="menuToggle"
-      class="menu-toggle"
-      type="button"
-      aria-label="Louvri meni"
-      aria-expanded="false">
-      ☰
-    </button>
-
-    <nav id="mainNav" class="main-nav"
-         aria-label="Navigasyon prensipal">
-      <a href="#home" data-i18n="home">Akèy</a>
-      <a href="#news" data-i18n="news">Nouvèl</a>
-      <a href="#culture" data-i18n="culture">Kilti</a>
-      <a href="#business" data-i18n="business">Biznis</a>
-      <a href="#community" data-i18n="community">Kominote</a>
-      <a href="#social" data-i18n="social">Rezo Sosyal</a>
-      <a href="#contact" data-i18n="contact">Kontak</a>
-    </nav>
-
-    <div class="language-switcher"
-         aria-label="Chwazi lang">
-      <button type="button"
-              class="lang-btn active"
-              data-lang="ht">KRE</button>
-      <button type="button"
-              class="lang-btn"
-              data-lang="fr">FRAN</button>
-      <button type="button"
-              class="lang-btn"
-              data-lang="en">ENG</button>
-    </div>
-
-  </div>
+<header>
+<div class="bar">
+<a href="#home" class="brand">
+<img class="logo" src="assets/images/léogâne-infos-II.png" alt="Logo LÉOGÂNE INFOS">
+<span><strong>LÉOGÂNE INFOS</strong><small>BSS1815 PRO-MAX DMP</small></span>
+</a>
+<button class="menu" id="menu" type="button" aria-expanded="false">☰</button>
+<nav id="nav">
+<a href="#home" data-t="home">Akèy</a>
+<a href="#news" data-t="news">Nouvèl</a>
+<a href="#culture" data-t="culture">Kilti</a>
+<a href="#business" data-t="business">Biznis</a>
+<a href="#community" data-t="community">Kominote</a>
+<a href="#social" data-t="social">Rezo Sosyal</a>
+<a href="#contact" data-t="contact">Kontak</a>
+</nav>
+<div class="languages">
+<button class="active" data-lang="ht">KRE</button>
+<button data-lang="fr">FRAN</button>
+<button data-lang="en">ENG</button>
+</div>
+</div>
 </header>
 
 <main>
-
-<!-- HERO -->
-<section id="home" class="hero-section">
-
-  <div class="hero-content">
-
-    <p class="eyebrow">
-      BSS1815 PRO-MAX DMP
-    </p>
-
-    <h1>LÉOGÂNE INFOS</h1>
-
-    <h2 data-i18n="tagline">
-      YON VWA KI RASANBLE NOU
-    </h2>
-
-    <p data-i18n="heroDescription">
-      Pon ant Léogâne, Florida ak dyaspora a.
-      Nouvèl, kilti, kominote ak opòtinite.
-    </p>
-
-    <a href="#social"
-       class="primary-btn"
-       data-i18n="discover">
-      Dekouvri rezo nou yo
-    </a>
-
-  </div>
-
-  <div class="hero-media">
-
-    <img
-      src="assets/images/léogâne-infos-II.png"
-      alt="LÉOGÂNE INFOS"
-      class="hero-logo">
-
-    <video
-      id="heroVideo"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata">
-      <source
-        src="assets/videos/1000315168.mp4"
-        type="video/mp4">
-    </video>
-
-    <button id="soundToggle"
-            class="sound-btn"
-            type="button"
-            aria-pressed="false"
-            data-i18n="soundOn">
-      Aktive son
-    </button>
-
-  </div>
-
+<section id="home" class="hero">
+<div>
+<p><strong>BSS1815 PRO-MAX DMP</strong></p>
+<h1>LÉOGÂNE INFOS</h1>
+<h2 data-t="tagline">YON VWA KI RASANBLE NOU</h2>
+<p data-t="description">Pon ant Léogâne, Florida ak dyaspora a. Nouvèl, kilti, kominote ak opòtinite.</p>
+<a class="btn" href="#social" data-t="explore">Dekouvri rezo nou yo</a>
+</div>
+<div class="media">
+<img src="assets/images/léogâne-infos-II.png" alt="LÉOGÂNE INFOS">
+<video id="video" autoplay muted loop playsinline preload="metadata" poster="assets/images/léogâne-infos-II.png">
+<source src="assets/videos/1000315168.mp4" type="video/mp4">
+</video>
+<button id="sound" class="sound" type="button" data-t="soundOn">Aktive son</button>
+</div>
 </section>
 
-<!-- NEWS -->
-<section id="news" class="content-section">
-
-  <h2 data-i18n="newsTitle">
-    NOUVÈL & ENFÒMASYON
-  </h2>
-
-  <p data-i18n="newsDescription">
-    Nouvèl ki verifye, analiz ak rapò
-    sou Léogâne, Ayiti ak dyaspora a.
-  </p>
-
-  <div class="feature-grid">
-
-    <article class="feature-card">
-      <span class="feature-icon">▤</span>
-      <h3 data-i18n="localNews">
-        Nouvèl Lokal
-      </h3>
-      <p data-i18n="localNewsDescription">
-        Enfòmasyon sou lavi ak aktivite
-        kominote Léogâne.
-      </p>
-    </article>
-
-    <article class="feature-card">
-      <span class="feature-icon">◉</span>
-      <h3 data-i18n="diasporaNews">
-        Nouvèl Dyaspora
-      </h3>
-      <p data-i18n="diasporaDescription">
-        Enfòmasyon pou kominote ayisyen
-        Florida ak lòt kote.
-      </p>
-    </article>
-
-  </div>
-
+<section id="news" class="section">
+<h2 data-t="newsTitle">NOUVÈL &amp; ENFÒMASYON</h2>
+<p class="intro" data-t="newsText">Nouvèl sou Léogâne, Ayiti ak dyaspora a.</p>
+<div class="cards">
+<article class="card">
+<h3 data-t="local">Nouvèl Lokal</h3>
+<p data-t="localText">Aktivite ak enfòmasyon kominote Léogâne.</p>
+</article>
+<article class="card">
+<h3 data-t="diaspora">Nouvèl Dyaspora</h3>
+<p data-t="diasporaText">Enfòmasyon pou kominote ayisyen aletranje.</p>
+</article>
+</div>
 </section>
 
-<!-- CULTURE -->
-<section id="culture" class="content-section">
-
-  <h2 data-i18n="cultureTitle">
-    KILTI & ERITAJ
-  </h2>
-
-  <p data-i18n="cultureDescription">
-    Rara, istwa Léogâne, mizik,
-    tradisyon ak eritaj kiltirèl.
-  </p>
-
+<section id="culture" class="section">
+<h2 data-t="cultureTitle">KILTI &amp; ERITAJ</h2>
+<p class="intro" data-t="cultureText">Rara, mizik, istwa Léogâne ak tradisyon nou yo.</p>
 </section>
 
-<!-- BUSINESS -->
-<section id="business" class="content-section">
-
-  <h2 data-i18n="businessTitle">
-    BUSINESS DIRECTORY
-  </h2>
-
-  <p data-i18n="businessDescription">
-    Yon espas pou prezante biznis
-    Léoganèz Ayiti ak dyaspora a.
-  </p>
-
+<section id="business" class="section">
+<h2 data-t="businessTitle">ANYÈ BIZNIS</h2>
+<p class="intro" data-t="businessText">Yon espas pou prezante biznis Léoganèz Ayiti ak dyaspora a.</p>
 </section>
 
-<!-- COMMUNITY -->
-<section id="community" class="content-section">
-
-  <h2 data-i18n="communityTitle">
-    KOMINOTE
-  </h2>
-
-  <p data-i18n="communityDescription">
-    Yon platfòm ki rasanble Léoganèz
-    toupatou nan mond lan.
-  </p>
-
+<section id="community" class="section">
+<h2 data-t="communityTitle">KOMINOTE</h2>
+<p class="intro" data-t="communityText">Yon platfòm ki rasanble Léoganèz toupatou nan mond lan.</p>
 </section>
 
-<!-- SOCIAL NETWORKS -->
-<section id="social" class="content-section social-section">
+<section id="social" class="section">
+<h2 data-t="socialTitle">REZO SOSYAL LÉOGÂNE INFOS</h2>
+<p class="intro" data-t="socialText">Swiv nou sou rezo sosyal nou yo.</p>
+<div class="socials">
 
-  <h2 data-i18n="socialTitle">
-    REZO SOSYAL OFISYÈL LÉOGÂNE INFOS
-  </h2>
+<a class="social tiktok" href="https://www.tiktok.com/@y_me11" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.7 2c.3 2.5 1.7 4 4.3 4.2v4.1a10.4 10.4 0 0 1-4.3-1.2v6.6a6.9 6.9 0 1 1-6.9-6.9h.7v4.2a2.8 2.8 0 1 0 2 2.7V2z"/></svg>
+TikTok</a>
 
-  <p data-i18n="socialDescription">
-    Swiv nou sou rezo sosyal nou yo.
-  </p>
+<a class="social telegram" href="https://t.me/bss1815dmp" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 3 2 10.5c-1.3.5-1.3 1.2-.2 1.6l5 1.6 2 6.2c.3.9.6 1.2 1.2 1.2.5 0 .8-.2 1.3-.7l2.5-2.4 5.2 3.8c1 .5 1.7.3 2-1L24 4.6c.4-1.5-.6-2.2-2.5-1.6ZM9 18l-.8-4.4L19.8 6l-9.4 9.4z"/></svg>
+Telegram</a>
 
-  <div id="socialGrid" class="social-grid">
+<a class="social facebook" href="https://www.facebook.com/share/1By3KvYRrM/" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 22v-8.5h2.9l.5-3.5h-3.4V7.8c0-1 .3-1.7 1.7-1.7H18V3a23 23 0 0 0-2.7-.2c-2.7 0-4.5 1.6-4.5 4.6V10H8v3.5h2.8V22z"/></svg>
+Facebook</a>
 
-    <a class="social-card tiktok"
-       data-network="tiktok"
-       href="https://www.tiktok.com/@y_me11"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="social-icon">♪</span>
-      <strong>TikTok</strong>
-    </a>
+<a class="social instagram" href="https://www.instagram.com/lebaron072/" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3"/></svg>
+Instagram</a>
 
-    <a class="social-card telegram"
-       data-network="telegram"
-       href="https://t.me/bss1815dmp"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="social-icon">➤</span>
-      <strong>Telegram</strong>
-    </a>
+<a class="social whatsapp" href="https://wa.me/14076405166" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 11.7a8.3 8.3 0 0 1-12.4 7.2L3 20l1.3-4.7a8.3 8.3 0 1 1 16-3.6Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 7.7c-.6 0-1 .8-1 1.6 0 2.5 3.7 6.4 6.5 7.2 1.8.5 3.3-.6 3.4-1.5l-2.6-1.2-1.3 1c-1.7-.8-2.8-2-3.6-3.6l.9-1.2-1.2-2.3z"/></svg>
+WhatsApp</a>
 
-    <a class="social-card facebook"
-       data-network="facebook"
-       href="https://www.facebook.com/share/1By3KvYRrM/"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="social-icon">f</span>
-      <strong>Facebook</strong>
-    </a>
+<a class="social youtube" href="https://www.youtube.com/@BSS1815PROMAXDMP" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 8 6 4-6 4z" fill="#080300"/></svg>
+YouTube</a>
 
-    <a class="social-card instagram"
-       data-network="instagram"
-       href="https://www.instagram.com/lebaron072/"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="social-icon">◎</span>
-      <strong>Instagram</strong>
-    </a>
+<a class="social spotify" href="https://open.spotify.com/user/31tjmtdar45qgcpjpiwps5rqrici" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M5.5 9c4.8-1.4 9.6-.8 13.3 1.5M6.5 12.4c4.2-1 8.4-.4 11.5 1.5M7.5 15.7c3.4-.7 6.6-.2 9.2 1.3" fill="none" stroke="#080300" stroke-width="1.6" stroke-linecap="round"/></svg>
+Spotify</a>
 
-    <a class="social-card whatsapp"
-       data-network="whatsapp"
-       href="https://wa.me/14076405166"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="social-icon">☎</span>
-      <strong>WhatsApp</strong>
-    </a>
+<a class="social linkedin" href="https://www.linkedin.com/in/maximax-multi-services-075ba2314" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h4v13H3zm2-6a2.3 2.3 0 1 1 0 4.6A2.3 2.3 0 0 1 5 2zm5 6h3.8v1.8c.6-1.1 1.8-2.1 4-2.1 4.3 0 5 2.7 5 6.2V21h-4v-6.4c0-1.5 0-3.4-2.2-3.4s-2.6 1.7-2.6 3.3V21h-4z"/></svg>
+LinkedIn</a>
 
-    <a class="social-card youtube"
-       data-network="youtube"
-       href="https://www.youtube.com/@BSS1815PROMAXDMP"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="social-icon">▶</span>
-      <strong>YouTube</strong>
-    </a>
+<a class="social x" href="https://x.com/w05g2m" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.3-8.5L1.8 2h6.5l4.5 6.8zM17.8 20h1.7L7.3 3.9H5.5z"/></svg>
+X</a>
 
-    <a class="social-card spotify"
-       data-network="spotify"
-       href="https://open.spotify.com/"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="social-icon">≋</span>
-      <strong>Spotify</strong>
-    </a>
+<a class="social truth" href="https://truthsocial.com/@briyant_soley_1815" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 8h12v3h-4.5v8h-3v-8H6z"/></svg>
+Truth Social</a>
 
-    <a class="social-card linkedin"
-       data-network="linkedin"
-       href="https://www.linkedin.com/"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="social-icon">in</span>
-      <strong>LinkedIn</strong>
-    </a>
-
-    <a class="social-card x"
-       data-network="x"
-       href="https://x.com/"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="social-icon">𝕏</span>
-      <strong>X</strong>
-    </a>
-
-    <a class="social-card truthsocial"
-       data-network="truthsocial"
-       href="https://truthsocial.com/"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span class="social-icon">T</span>
-      <strong>Truth Social</strong>
-    </a>
-
-  </div>
-
+</div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="content-section contact-section">
-
-  <h2 data-i18n="contactTitle">
-    KONTAK LÉOGÂNE INFOS
-  </h2>
-
-  <div class="contact-grid">
-
-    <a href="tel:+14076405166"
-       class="contact-card">
-      <span>🇺🇸 USA / FLORIDA</span>
-      <strong>(407) 640-5166</strong>
-    </a>
-
-    <a href="tel:+13175381150"
-       class="contact-card">
-      <span>🇺🇸 USA</span>
-      <strong>(317) 538-1150</strong>
-    </a>
-
-    <a href="tel:+50942544447"
-       class="contact-card">
-      <span>🇭🇹 HAÏTI</span>
-      <strong>+509 4254-4447</strong>
-    </a>
-
-    <a href="tel:+50943437488"
-       class="contact-card">
-      <span>🇭🇹 HAÏTI</span>
-      <strong>+509 4343-7488</strong>
-    </a>
-
-  </div>
-
+<section id="contact" class="section">
+<h2 data-t="contactTitle">KONTAK LÉOGÂNE INFOS</h2>
+<div class="phones">
+<a class="phone" href="tel:+14076405166"><span>USA / FLORIDA</span><strong>(407) 640-5166</strong></a>
+<a class="phone" href="tel:+13175381150"><span>USA</span><strong>(317) 538-1150</strong></a>
+<a class="phone" href="tel:+50942544447"><span>HAÏTI</span><strong>+509 4254-4447</strong></a>
+<a class="phone" href="tel:+50943437488"><span>HAÏTI</span><strong>+509 4343-7488</strong></a>
+</div>
 </section>
-
 </main>
 
-<footer class="site-footer">
-
-  <img
-    src="assets/images/léogâne-infos-II.png"
-    alt="LÉOGÂNE INFOS"
-    class="footer-logo">
-
-  <h3>LÉOGÂNE INFOS</h3>
-
-  <p data-i18n="tagline">
-    YON VWA KI RASANBLE NOU
-  </p>
-
-  <p>BSS1815 PRO-MAX DMP</p>
-
-  <p>
-    © <span id="currentYear">2026</span>
-    LÉOGÂNE INFOS
-  </p>
-
-  <strong>DEVAN DEVAN NÈT!</strong>
-
+<footer>
+<img src="assets/images/léogâne-infos-II.png" alt="Logo LÉOGÂNE INFOS">
+<h3>LÉOGÂNE INFOS</h3>
+<p data-t="tagline">YON VWA KI RASANBLE NOU</p>
+<p>BSS1815 PRO-MAX DMP</p>
+<p>© <span id="year"></span> LÉOGÂNE INFOS</p>
+<strong>DEVAN DEVAN NÈT!</strong>
 </footer>
 
+<script>
+"use strict";
+
+const dictionary = {
+ht:{
+home:"Akèy",news:"Nouvèl",culture:"Kilti",business:"Biznis",
+community:"Kominote",social:"Rezo Sosyal",contact:"Kontak",
+tagline:"YON VWA KI RASANBLE NOU",
+description:"Pon ant Léogâne, Florida ak dyaspora a. Nouvèl, kilti, kominote ak opòtinite.",
+explore:"Dekouvri rezo nou yo",
+soundOn:"Aktive son",soundOff:"Koupe son",
+newsTitle:"NOUVÈL & ENFÒMASYON",
+newsText:"Nouvèl sou Léogâne, Ayiti ak dyaspora a.",
+local:"Nouvèl Lokal",
+localText:"Aktivite ak enfòmasyon kominote Léogâne.",
+diaspora:"Nouvèl Dyaspora",
+diasporaText:"Enfòmasyon pou kominote ayisyen aletranje.",
+cultureTitle:"KILTI & ERITAJ",
+cultureText:"Rara, mizik, istwa Léogâne ak tradisyon nou yo.",
+businessTitle:"ANYÈ BIZNIS",
+businessText:"Yon espas pou prezante biznis Léoganèz Ayiti ak dyaspora a.",
+communityTitle:"KOMINOTE",
+communityText:"Yon platfòm ki rasanble Léoganèz toupatou nan mond lan.",
+socialTitle:"REZO SOSYAL LÉOGÂNE INFOS",
+socialText:"Swiv nou sou rezo sosyal nou yo.",
+contactTitle:"KONTAK LÉOGÂNE INFOS"
+},
+fr:{
+home:"Accueil",news:"Actualités",culture:"Culture",business:"Entreprises",
+community:"Communauté",social:"Réseaux sociaux",contact:"Contact",
+tagline:"UNE VOIX QUI NOUS RASSEMBLE",
+description:"Un pont entre Léogâne, la Floride et la diaspora. Actualités, culture, communauté et opportunités.",
+explore:"Découvrir nos réseaux",
+soundOn:"Activer le son",soundOff:"Couper le son",
+newsTitle:"ACTUALITÉS & INFORMATIONS",
+newsText:"Actualités de Léogâne, d'Haïti et de la diaspora.",
+local:"Actualités locales",
+localText:"Activités et informations de la communauté de Léogâne.",
+diaspora:"Actualités de la diaspora",
+diasporaText:"Informations pour les communautés haïtiennes à l'étranger.",
+cultureTitle:"CULTURE & PATRIMOINE",
+cultureText:"Rara, musique, histoire de Léogâne et traditions.",
+businessTitle:"ANNUAIRE DES ENTREPRISES",
+businessText:"Un espace pour présenter les entreprises de Léogâne et de la diaspora.",
+communityTitle:"COMMUNAUTÉ",
+communityText:"Une plateforme qui rassemble les Léogânais du monde entier.",
+socialTitle:"RÉSEAUX SOCIAUX LÉOGÂNE INFOS",
+socialText:"Suivez-nous sur nos réseaux sociaux.",
+contactTitle:"CONTACT LÉOGÂNE INFOS"
+},
+en:{
+home:"Home",news:"News",culture:"Culture",business:"Business",
+community:"Community",social:"Social Media",contact:"Contact",
+tagline:"A VOICE THAT UNITES US",
+description:"Connecting Léogâne, Florida and the diaspora through news, culture, community and opportunities.",
+explore:"Explore our networks",
+soundOn:"Turn sound on",soundOff:"Mute sound",
+newsTitle:"NEWS & INFORMATION",
+newsText:"News from Léogâne, Haiti and the diaspora.",
+local:"Local News",
+localText:"Activities and information from the Léogâne community.",
+diaspora:"Diaspora News",
+diasporaText:"Information for Haitian communities abroad.",
+cultureTitle:"CULTURE & HERITAGE",
+cultureText:"Rara, music, Léogâne history and traditions.",
+businessTitle:"BUSINESS DIRECTORY",
+businessText:"A place to showcase businesses from Léogâne and the diaspora.",
+communityTitle:"COMMUNITY",
+communityText:"Connecting people from Léogâne around the world.",
+socialTitle:"LÉOGÂNE INFOS SOCIAL MEDIA",
+socialText:"Follow us on our social networks.",
+contactTitle:"CONTACT LÉOGÂNE INFOS"
+}
+};
+
+let currentLanguage="ht";
+const video=document.getElementById("video");
+const sound=document.getElementById("sound");
+const nav=document.getElementById("nav");
+const menu=document.getElementById("menu");
+
+function setLanguage(lang){
+ if(!dictionary[lang])return;
+ currentLanguage=lang;
+ document.documentElement.lang=lang;
+ document.querySelectorAll("[data-t]").forEach(el=>{
+  const key=el.dataset.t;
+  if(dictionary[lang][key])el.textContent=dictionary[lang][key];
+ });
+ document.querySelectorAll("[data-lang]").forEach(btn=>{
+  btn.classList.toggle("active",btn.dataset.lang===lang);
+ });
+ try{localStorage.setItem("leogane-language",lang)}catch(e){}
+}
+
+document.querySelectorAll("[data-lang]").forEach(btn=>{
+ btn.addEventListener("click",()=>setLanguage(btn.dataset.lang));
+});
+
+menu.addEventListener("click",()=>{
+ const open=nav.classList.toggle("open");
+ menu.setAttribute("aria-expanded",String(open));
+});
+
+nav.querySelectorAll("a").forEach(link=>{
+ link.addEventListener("click",()=>{
+  nav.classList.remove("open");
+  menu.setAttribute("aria-expanded","false");
+ });
+});
+
+sound.addEventListener("click",async()=>{
+ video.muted=!video.muted;
+ sound.dataset.t=video.muted?"soundOn":"soundOff";
+ setLanguage(currentLanguage);
+ if(video.paused){
+  try{await video.play()}catch(e){console.warn("Video playback unavailable",e)}
+ }
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+let saved="ht";
+try{saved=localStorage.getItem("leogane-language")||"ht"}catch(e){}
+setLanguage(saved);
+</script>
 </body>
 </html>
