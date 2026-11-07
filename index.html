@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#100600">
+<meta name="google" content="notranslate">
 <meta name="description" content="LÉOGÂNE ENFO — Yon vwa ki rasanble nou. Nouvèl, kilti, biznis ak kominote.">
 <title>LÉOGÂNE ENFO | BSS1815 PRO-MAX DMP</title>
 <link rel="icon" href="léogâne-enfo.png" type="image/png">
@@ -176,7 +177,6 @@ main{overflow:hidden}
   margin-top:15px;
   box-shadow:0 0 22px rgba(255,120,0,.35);
 }
-/* PREMYE ESPAS VID LA - KOUNYE A SE KESYON */
 .hero-qa{
   position:relative;
   padding:24px;
@@ -250,7 +250,6 @@ main{overflow:hidden}
   font-weight:700;
 }
 .qa-chips button:hover{background:var(--orange);color:#100500}
-/* === SA A SELMAN M AJOUTE: BWAT KARE VIDEO AVATAR LA === */
 .avatar-section{
   max-width:1250px;
   margin:auto;
@@ -279,7 +278,7 @@ main{overflow:hidden}
   overflow:hidden;
   box-shadow:0 0 40px rgba(255,120,0,.35);
 }
-.avatar-frame video{
+.avatar-frame img{
   width:100%;
   height:100%;
   object-fit:cover;
@@ -354,7 +353,7 @@ section.content h2{
 .facebook{--social-color:#2684ff}
 .whatsapp{--social-color:#25d366}
 .youtube{--social-color:#ff3030}
-.【entity-spotify¦canonical_name=Spotify】{--social-color:#1ed760}
+. 【entity-spotify¦canonical_name=Spotify】{--social-color:#1ed760}
 .linkedin{--social-color:#2b9bd8}
 .xnetwork{--social-color:#d6a16b}
 .truth{--social-color:#a779e9}
@@ -472,10 +471,10 @@ footer .slogan{
       <a href="#social" data-i18n="social">Rezo Sosyal</a>
       <a href="#contact" data-i18n="contact">Kontak</a>
     </nav>
-    <div class="languages" aria-label="Lang">
-      <button type="button" data-lang="ht" class="active">KRE</button>
-      <button type="button" data-lang="fr">FRA</button>
-      <button type="button" data-lang="en">ENG</button>
+    <div class="languages" aria-label="Lang" translate="no">
+      <button type="button" data-lang="ht" class="active" translate="no">KRE</button>
+      <button type="button" data-lang="fr" translate="no">FRA</button>
+      <button type="button" data-lang="en" translate="no">ENG</button>
     </div>
   </div>
 </header>
@@ -506,13 +505,12 @@ footer .slogan{
       <div id="qaAnswer" class="qa-answer"></div>
     </div>
   </section>
-  <!-- === SA A SELMAN M AJOUTE: BWAT KARE VIDEO AVATAR LA === -->
   <section class="avatar-section" id="avatar">
     <h2 data-i18n="avatarTitle">AVATAR NOU — LÉOGÂNE INFO</h2>
     <p data-i18n="avatarDescription">Tandé nou sé renmen nou ❤️</p>
     <div class="avatar-box">
       <div class="avatar-frame">
-        <video src="avatar.mp4" autoplay muted loop playsinline controls></video>
+        <img src="avatar-q&amp;a.jpg" alt="Avatar Léogâne Info">
       </div>
       <div class="avatar-label" data-i18n="avatarLabel">✨ FULL BODY AP MACHE — 5'9" ✨</div>
     </div>
@@ -748,7 +746,7 @@ const translations = {
     contactTitle:"CONTACT LÉOGÂNE ENFO",
     qaDefault:"Thanks for your question! For a fast answer, call us at (407) 640-5166 or message us on WhatsApp. Also check the Contact and Social Networks sections below.",
     qaContact:"Contact us: USA (317) 538-1150 — Florida (407) 640-5166 — Haiti +509 4482-9869 / +509 4254-4447 / +509 4343-7488. WhatsApp: (407) 640-5166",
-    qaSocial:"Follow us on TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP, Spotify, LinkedIn, X and Truth Social. All links are in the Social Networks section.",
+    qaSocial:"Follow us on TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP, 【entity-Spotify¦canonical_name=Spotify】, LinkedIn, X and Truth Social. All links are in the Social Networks section.",
     qaBusiness:"Do you have a business? LÉOGÂNE ENFO can feature it in the Business Directory for Léogâne, Haiti and the diaspora to see. Contact us on WhatsApp (407) 640-5166 to register your business.",
     qaCulture:"Léogâne culture: Rara, Léogâne history, music, traditions and cultural heritage. That's what we share in the Culture & Heritage section.",
     qaAbout:"LÉOGÂNE ENFO is a bridge between Léogâne, Florida and the diaspora. News, culture, community and opportunities. A voice that brings us together — DEVAN DEVAN NÈT!"
@@ -756,6 +754,7 @@ const translations = {
 };
 const languageButtons = document.querySelectorAll("[data-lang]");
 let currentLanguage = "ht";
+const langLabels = {ht:"KRE", fr:"FRA", en:"ENG"};
 function changeLanguage(lang) {
   if (!translations[lang]) return;
   currentLanguage = lang;
@@ -773,7 +772,9 @@ function changeLanguage(lang) {
     }
   });
   languageButtons.forEach(btn => {
-    const selected = btn.dataset.lang === lang;
+    const code = btn.dataset.lang;
+    btn.textContent = langLabels[code];
+    const selected = code === lang;
     btn.classList.toggle("active", selected);
     btn.setAttribute("aria-pressed", String(selected));
   });
