@@ -268,6 +268,7 @@ main{overflow:hidden}
 .avatar-box{
   max-width:520px;
   margin:0 auto;
+  position:relative;
 }
 .avatar-frame{
   width:100%;
@@ -277,18 +278,68 @@ main{overflow:hidden}
   border-radius:24px;
   overflow:hidden;
   box-shadow:0 0 40px rgba(255,120,0,.35);
+  animation:frameGlow 3s ease-in-out infinite;
 }
 .avatar-frame img{
   width:100%;
   height:100%;
   object-fit:cover;
   display:block;
+  animation:avatarWalk 5s ease-in-out infinite;
+  transform-origin:center bottom;
+}
+@keyframes avatarWalk{
+  0%{transform:scale(1) translateX(0) translateY(0) rotate(0deg)}
+  20%{transform:scale(1.03) translateX(-6px) translateY(-6px) rotate(-0.6deg)}
+  40%{transform:scale(1.05) translateX(6px) translateY(-3px) rotate(0.6deg)}
+  60%{transform:scale(1.03) translateX(-6px) translateY(-6px) rotate(-0.6deg)}
+  80%{transform:scale(1.05) translateX(6px) translateY(-3px) rotate(0.6deg)}
+  100%{transform:scale(1) translateX(0) translateY(0) rotate(0deg)}
+}
+@keyframes frameGlow{
+  0%,100%{box-shadow:0 0 30px rgba(255,120,0,.30)}
+  50%{box-shadow:0 0 55px rgba(255,120,0,.60)}
+}
+.avatar-bubble{
+  background:#fff;
+  color:#1a0f00;
+  font-weight:900;
+  font-size:17px;
+  line-height:1.4;
+  padding:14px 16px;
+  border-radius:18px;
+  border:2px solid var(--orange);
+  max-width:480px;
+  margin:0 auto 14px;
+  box-shadow:0 8px 25px rgba(0,0,0,.35);
+  animation:bubblePop 3s ease-in-out infinite;
+}
+@keyframes bubblePop{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-4px) scale(1.02)}
+}
+.avatar-speak{
+  cursor:pointer;
+  border:none;
+  background:linear-gradient(135deg,var(--apricot),var(--orange));
+  color:#100500;
+  font-weight:900;
+  font-size:17px;
+  border-radius:30px;
+  padding:13px 26px;
+  margin-top:14px;
+  box-shadow:0 0 22px rgba(255,120,0,.35);
 }
 .avatar-label{
   margin-top:10px;
   font-weight:900;
   color:var(--apricot);
   font-size:15px;
+  animation:labelPulse 2.5s ease-in-out infinite;
+}
+@keyframes labelPulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.75;transform:scale(1.03)}
 }
 section.content{
   max-width:1250px;
@@ -353,7 +404,7 @@ section.content h2{
 .facebook{--social-color:#2684ff}
 .whatsapp{--social-color:#25d366}
 .youtube{--social-color:#ff3030}
-. 【entity-spotify¦canonical_name=Spotify】{--social-color:#1ed760}
+. spotify{--social-color:#1ed760}
 .linkedin{--social-color:#2b9bd8}
 .xnetwork{--social-color:#d6a16b}
 .truth{--social-color:#a779e9}
@@ -509,9 +560,11 @@ footer .slogan{
     <h2 data-i18n="avatarTitle">AVATAR NOU — LÉOGÂNE INFO</h2>
     <p data-i18n="avatarDescription">Tandé nou sé renmen nou ❤️</p>
     <div class="avatar-box">
+      <div class="avatar-bubble" data-i18n="avatarGreeting">💬 Bonjou! Mwen kontan tandé nou, sé renmen nou! ❤️</div>
       <div class="avatar-frame">
         <img src="avatar-q&amp;a.jpg" alt="Avatar Léogâne Info">
       </div>
+      <button class="avatar-speak" type="button" onclick="speakGreeting()" data-i18n="avatarSpeak">▶ KOUTE BONJOU A</button>
       <div class="avatar-label" data-i18n="avatarLabel">✨ FULL BODY AP MACHE — 5'9" ✨</div>
     </div>
   </section>
@@ -634,6 +687,8 @@ const translations = {
     qaChipCulture:"Kilti",
     avatarTitle:"AVATAR NOU — LÉOGÂNE INFO",
     avatarDescription:"Tandé nou sé renmen nou ❤️",
+    avatarGreeting:"💬 Bonjou! Mwen kontan tandé nou, sé renmen nou! ❤️",
+    avatarSpeak:"▶ KOUTE BONJOU A",
     avatarLabel:"✨ FULL BODY AP MACHE — 5'9\" ✨",
     newsTitle:"NOUVÈL & ENFÒMASYON",
     newsDescription:"Nouvèl verifye, analiz ak rapò sou Léogâne, Ayiti ak dyaspora a.",
@@ -681,6 +736,8 @@ const translations = {
     qaChipCulture:"Culture",
     avatarTitle:"NOTRE AVATAR — LÉOGÂNE INFO",
     avatarDescription:"Nous écouter c'est nous aimer ❤️",
+    avatarGreeting:"💬 Bonjour ! Je suis contente de vous entendre, c'est nous aimer ! ❤️",
+    avatarSpeak:"▶ ÉCOUTER LE BONJOUR",
     avatarLabel:"✨ PLEIN CORPS EN MARCHE — 5'9\" ✨",
     newsTitle:"ACTUALITÉS & INFORMATIONS",
     newsDescription:"Actualités vérifiées, analyses et reportages sur Léogâne, Haïti et la diaspora.",
@@ -728,6 +785,8 @@ const translations = {
     qaChipCulture:"Culture",
     avatarTitle:"OUR AVATAR — LEOGANE INFO",
     avatarDescription:"Hearing us is loving us ❤️",
+    avatarGreeting:"💬 Hello! I'm so happy to hear you, hearing us is loving us! ❤️",
+    avatarSpeak:"▶ LISTEN TO THE GREETING",
     avatarLabel:"✨ FULL BODY WALKING — 5'9\" ✨",
     newsTitle:"NEWS & INFORMATION",
     newsDescription:"Verified news, analysis and reporting about Léogâne, Haiti and the diaspora.",
@@ -746,7 +805,7 @@ const translations = {
     contactTitle:"CONTACT LÉOGÂNE ENFO",
     qaDefault:"Thanks for your question! For a fast answer, call us at (407) 640-5166 or message us on WhatsApp. Also check the Contact and Social Networks sections below.",
     qaContact:"Contact us: USA (317) 538-1150 — Florida (407) 640-5166 — Haiti +509 4482-9869 / +509 4254-4447 / +509 4343-7488. WhatsApp: (407) 640-5166",
-    qaSocial:"Follow us on TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP, 【entity-Spotify¦canonical_name=Spotify】, LinkedIn, X and Truth Social. All links are in the Social Networks section.",
+    qaSocial:"Follow us on TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP, Spotify, LinkedIn, X and Truth Social. All links are in the Social Networks section.",
     qaBusiness:"Do you have a business? LÉOGÂNE ENFO can feature it in the Business Directory for Léogâne, Haiti and the diaspora to see. Contact us on WhatsApp (407) 640-5166 to register your business.",
     qaCulture:"Léogâne culture: Rara, Léogâne history, music, traditions and cultural heritage. That's what we share in the Culture & Heritage section.",
     qaAbout:"LÉOGÂNE ENFO is a bridge between Léogâne, Florida and the diaspora. News, culture, community and opportunities. A voice that brings us together — DEVAN DEVAN NÈT!"
@@ -782,6 +841,22 @@ function changeLanguage(lang) {
   try {
     localStorage.setItem("leogane-enfo-language", lang);
   } catch (e) {}
+}
+function speakGreeting(){
+  const texts = {
+    ht:"Bonjou! Mwen kontan tandé nou, sé renmen nou!",
+    fr:"Bonjour! Je suis contente de vous entendre, c'est nous aimer!",
+    en:"Hello! I am so happy to hear you, hearing us is loving us!"
+  };
+  const langs = {ht:"ht-HT", fr:"fr-FR", en:"en-US"};
+  try{
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(texts[currentLanguage] || texts.ht);
+    u.lang = langs[currentLanguage] || "ht-HT";
+    u.rate = 0.95;
+    u.pitch = 1.1;
+    window.speechSynthesis.speak(u);
+  }catch(e){}
 }
 let lastQaKey = "";
 function showQaAnswer(key) {
