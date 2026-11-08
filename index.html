@@ -224,8 +224,13 @@ function speakText(text){
   try{
     window.speechSynthesis.cancel();
     const u=new SpeechSynthesisUtterance(text);
-    u.lang = currentLanguage==="ht" ? "ht-HT" : currentLanguage==="fr" ? "fr-FR" : "en-US";
-    u.rate=0.95; u.pitch=1.1;
+    // FÒSE FRANSE: telefòn yo pa gen vwa Kreyòl, si nou mete ht-HT li tonbe sou vwa Anglè ki pa konprann. Fransè pwononse fraz la byen.
+    u.lang = "fr-FR";
+    u.rate=0.85; u.pitch=1.0;
+    const voices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
+    // Chache yon vwa Fransè reyèl
+    const frVoice = voices.find(v=> (v.lang||"").toLowerCase().startsWith("fr")) || voices.find(v=> (v.name||"").toLowerCase().includes("french")) || voices.find(v=> (v.name||"").toLowerCase().includes("fran"));
+    if(frVoice) u.voice = frVoice;
     window.speechSynthesis.speak(u);
   }catch(e){}
 }
@@ -236,9 +241,12 @@ function unmuteAvatar(){
   // Vwa video a rete MUTE pou ansyen fraz la pa janm repete. Se vwa sit la ki ap di NOUVO fraz la:
   try{ window.speechSynthesis.cancel(); }catch(e){}
   const u=new SpeechSynthesisUtterance("BONJOU & BONSWA LÉOGÂNE ENFO TANDÉ NOU SÉ RENMEN NOU");
-  u.lang = currentLanguage==="fr" ? "fr-FR" : currentLanguage==="en" ? "en-US" : "ht-HT";
-  u.rate=0.95; u.pitch=1.1;
-  try{ window.speechSynthesis.speak(u); }catch(e){}
+  u.lang = "fr-FR";
+  u.rate=0.85; u.pitch=1.0;
+  const voices2 = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
+  const frVoice2 = voices2.find(v=> (v.lang||"").toLowerCase().startsWith("fr")) || voices2.find(v=> (v.name||"").toLowerCase().includes("french"));
+  if(frVoice2) u.voice = frVoice2;
+  try{ window.speechSynthesis.speak(u); }catch(e){} }catch(e){}
   if(b){ b.textContent="🔊 BONJOU & BONSWA LÉOGÂNE ENFO TANDÉ NOU SÉ RENMEN NOU"; b.classList.add("playing"); }
   setTimeout(()=>{ if(b) b.style.display="none"; }, 4000);
 }
