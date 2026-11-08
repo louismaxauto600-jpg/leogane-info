@@ -5,24 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#100600">
 <meta name="google" content="notranslate">
-<meta name="description" content="LÉOGÂNE ENFO — Yon vwa ki rasanble nou.">
 <title>LÉOGÂNE ENFO | BSS1815 PRO-MAX DMP</title>
 <link rel="icon" href="léogâne-enfo.png" type="image/png">
 <style>
-:root{--orange:#ff7900;--apricot:#ffb366;--gold:#ffce8c;--black:#080300;--deep:#160800;--line:rgba(255,140,20,.38);--muted:#d49b65}
+:root{--orange:#ff7900;--apricot:#ffb366;--gold:#ffce8c;--black:#080300;--line:rgba(255,140,20,.38);--muted:#d49b65}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--apricot);background:radial-gradient(ellipse at 12% 8%,rgba(255,115,0,.28),transparent 42%),radial-gradient(ellipse at 90% 42%,rgba(255,120,0,.15),transparent 45%),linear-gradient(145deg,#080300 0%,#321100 42%,#110500 70%,#080300 100%);background-attachment:fixed;line-height:1.6}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--apricot);background:radial-gradient(ellipse at 12% 8%,rgba(255,115,0,.28),transparent 42%),linear-gradient(145deg,#080300 0%,#321100 42%,#110500 70%,#080300 100%);background-attachment:fixed;line-height:1.6}
 a{color:inherit}button{font:inherit}
-header{position:sticky;top:0;z-index:20;background:linear-gradient(90deg,#080300,#2d1000,#080300);border-bottom:2px solid var(--orange);box-shadow:0 6px 28px rgba(255,100,0,.2)}
+header{position:sticky;top:0;z-index:20;background:linear-gradient(90deg,#080300,#2d1000,#080300);border-bottom:2px solid var(--orange)}
 .header-inner{max-width:1250px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
-.logo-wrap{width:68px;height:68px;flex-shrink:0;display:grid;place-items:center;border:2px solid var(--orange);border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#ff9b2e,#190800);box-shadow:0 0 20px rgba(255,116,0,.4)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-wrap{width:68px;height:68px;flex-shrink:0;display:grid;place-items:center;border:2px solid var(--orange);border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#ff9b2e,#190800)}
 .logo-wrap img{width:100%;height:100%;object-fit:contain}
-.logo-fallback{display:none;font-weight:900;color:#100500;font-size:24px}
-.brand strong{display:block;color:var(--gold);font-size:clamp(20px,2.5vw,30px);letter-spacing:1px}
+.brand strong{display:block;color:var(--gold);font-size:clamp(20px,2.5vw,30px)}
 .brand small{color:var(--orange);font-size:10px;font-weight:900;letter-spacing:2px}
-nav{display:flex;flex-wrap:wrap;align-items:center;gap:5px}
+nav{display:flex;flex-wrap:wrap;gap:5px}
 nav a{text-decoration:none;font-size:12px;font-weight:bold;padding:9px 10px;border-radius:8px}
 nav a:hover{color:#100500;background:var(--apricot)}
 .languages{display:flex;gap:5px}
@@ -32,24 +30,17 @@ nav a:hover{color:#100500;background:var(--apricot)}
 main{overflow:hidden}
 .hero{max-width:1250px;margin:auto;padding:70px 22px 20px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px}
 .eyebrow{font-size:12px;font-weight:900;letter-spacing:2px;color:var(--orange)}
-.hero h1{font-size:clamp(46px,7vw,92px);line-height:1;letter-spacing:1px;color:var(--gold);text-shadow:0 0 35px rgba(255,105,0,.4);margin:18px 0}
-.hero h2{color:var(--orange);font-size:clamp(19px,3vw,31px);letter-spacing:2px}
-.hero p{max-width:600px}
-.cta{display:inline-block;background:linear-gradient(135deg,var(--apricot),var(--orange));color:#100500;font-weight:900;text-decoration:none;border-radius:30px;padding:13px 25px;margin-top:15px;box-shadow:0 0 22px rgba(255,120,0,.35)}
-/* ==== AVATAR AI — NAN BWAT LA ==== */
-.avatar-ai-wrap{position:relative;padding:24px;border-radius:24px;border:2px solid var(--orange);background:linear-gradient(145deg,#3a1500,#080300);box-shadow:0 0 40px rgba(255,120,0,.24)}
+.hero h1{font-size:clamp(46px,7vw,92px);line-height:1;color:var(--gold);margin:18px 0}
+.hero h2{color:var(--orange);font-size:clamp(19px,3vw,31px)}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--apricot),var(--orange));color:#100500;font-weight:900;text-decoration:none;border-radius:30px;padding:13px 25px;margin-top:15px}
+.avatar-ai-wrap{padding:24px;border-radius:24px;border:2px solid var(--orange);background:linear-gradient(145deg,#3a1500,#080300);box-shadow:0 0 40px rgba(255,120,0,.24)}
 .avatar-ai-wrap h3{color:var(--gold);font-size:clamp(22px,3vw,28px);margin:0 0 8px;text-align:center}
-.avatar-ai-wrap .ai-sub{color:var(--muted);margin:0 0 14px;text-align:center;font-size:14px}
-.avatar-bubble{background:#fff;color:#1a0f00;font-weight:900;font-size:16px;line-height:1.45;padding:14px 16px;border-radius:18px;border:2px solid var(--orange);margin:0 0 14px;box-shadow:0 8px 25px rgba(0,0,0,.35);min-height:68px}
-.avatar-frame{width:100%;aspect-ratio:1/1;background:#000;border:4px solid var(--orange);border-radius:24px;overflow:hidden;box-shadow:0 0 40px rgba(255,120,0,.35);animation:frameGlow 3s ease-in-out infinite;position:relative}
-.avatar-frame img{width:100%;height:100%;object-fit:cover;display:block;animation:avatarWalk 5s ease-in-out infinite;transform-origin:center bottom}
-.avatar-frame.talking img{animation:avatarTalk 0.45s ease-in-out infinite}
-.avatar-frame.talking{border-color:#fff;box-shadow:0 0 60px rgba(255,255,255,.55),0 0 60px rgba(255,120,0,.6)}
+.ai-sub{color:var(--muted);margin:0 0 14px;text-align:center;font-size:14px}
+.avatar-bubble{background:#fff;color:#1a0f00;font-weight:900;font-size:16px;line-height:1.45;padding:14px 16px;border-radius:18px;border:2px solid var(--orange);margin:0 0 14px;min-height:68px}
+.avatar-video-frame{width:100%;aspect-ratio:1/1;background:#000;border:4px solid var(--orange);border-radius:24px;overflow:hidden;box-shadow:0 0 40px rgba(255,120,0,.35);position:relative}
+.avatar-video-frame video{width:100%;height:100%;object-fit:cover;display:block}
 .live-dot{position:absolute;top:12px;left:12px;background:#ff2020;color:#fff;font-size:11px;font-weight:900;padding:5px 10px;border-radius:20px;letter-spacing:1px;animation:liveBlink 1s infinite;z-index:2}
 @keyframes liveBlink{0%,100%{opacity:1}50%{opacity:.4}}
-@keyframes avatarWalk{0%{transform:scale(1) translateX(0) translateY(0) rotate(0deg)}20%{transform:scale(1.03) translateX(-6px) translateY(-6px) rotate(-0.6deg)}40%{transform:scale(1.05) translateX(6px) translateY(-3px) rotate(0.6deg)}60%{transform:scale(1.03) translateX(-6px) translateY(-6px) rotate(-0.6deg)}80%{transform:scale(1.05) translateX(6px) translateY(-3px) rotate(0.6deg)}100%{transform:scale(1) translateX(0) translateY(0) rotate(0deg)}}
-@keyframes avatarTalk{0%{transform:scale(1) translateY(0)}50%{transform:scale(1.02) translateY(-4px)}100%{transform:scale(1) translateY(0)}}
-@keyframes frameGlow{0%,100%{box-shadow:0 0 30px rgba(255,120,0,.30)}50%{box-shadow:0 0 55px rgba(255,120,0,.60)}}
 .ai-input-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .ai-input-row input{flex:1;min-width:180px;padding:14px 16px;border-radius:12px;border:1px solid var(--orange);background:#140700;color:#fff;font-size:16px;outline:none}
 .ai-input-row input::placeholder{color:var(--muted)}
@@ -69,7 +60,7 @@ section.content h2{color:var(--gold);font-size:clamp(26px,4vw,39px);margin:0 0 1
 .social{min-height:105px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-decoration:none;border:2px solid var(--social-color,var(--orange));background:linear-gradient(150deg,#180800,#080300);border-radius:15px;font-size:13px;font-weight:900;color:var(--social-color,var(--apricot))}
 .social:hover{transform:translateY(-4px)}
 .instagram{border-color:#c13584;color:#f77737;background:linear-gradient(#110600,#110600) padding-box,linear-gradient(40deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5) border-box;border:2px solid transparent}
-.tiktok{--social-color:#35e5df}.telegram{--social-color:#30b9ed}.facebook{--social-color:#2684ff}.whatsapp{--social-color:#25d366}.youtube{--social-color:#ff3030}. 【entity-spotify¦canonical_name=Spotify】{--social-color:#1ed760}.linkedin{--social-color:#2b9bd8}.xnetwork{--social-color:#d6a16b}.truth{--social-color:#a779e9}
+.tiktok{--social-color:#35e5df}.telegram{--social-color:#30b9ed}.facebook{--social-color:#2684ff}.【entity-whatsapp¦canonical_name=WhatsApp】{--social-color:#25d366}.youtube{--social-color:#ff3030}.spotify{--social-color:#1ed760}.linkedin{--social-color:#2b9bd8}.xnetwork{--social-color:#d6a16b}.truth{--social-color:#a779e9}
 .social-symbol{font-size:30px;font-weight:900;line-height:1}
 .contact-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
 .contact-card{text-decoration:none;text-align:center;padding:19px 10px;border:1px solid var(--orange);border-radius:15px;background:linear-gradient(145deg,#301000,#090300);display:flex;flex-direction:column;gap:9px;justify-content:center}
@@ -87,10 +78,10 @@ footer .slogan{color:var(--orange);font-size:25px;font-weight:900;letter-spacing
 <header>
   <div class="header-inner">
     <a href="#home" class="brand">
-      <div class="logo-wrap"><img src="léogâne-enfo.png" alt="Logo LÉOGÂNE ENFO" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-fallback">LE</span></div>
+      <div class="logo-wrap"><img src="léogâne-enfo.png" alt="Logo LÉOGÂNE ENFO" onerror="this.style.display='none'"></div>
       <div><strong>LÉOGÂNE ENFO</strong><small>BSS1815 PRO-MAX DMP</small></div>
     </a>
-    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Meni" aria-expanded="false">☰</button>
+    <button id="menuToggle" class="menu-toggle" type="button">☰</button>
     <nav id="mainNav">
       <a href="#home" data-i18n="home">Akèy</a>
       <a href="#avatar-ai" data-i18n="questions">Avatar AI</a>
@@ -101,7 +92,7 @@ footer .slogan{color:var(--orange);font-size:25px;font-weight:900;letter-spacing
       <a href="#social" data-i18n="social">Rezo Sosyal</a>
       <a href="#contact" data-i18n="contact">Kontak</a>
     </nav>
-    <div class="languages" aria-label="Lang" translate="no">
+    <div class="languages" translate="no">
       <button type="button" data-lang="ht" class="active" translate="no">KRE</button>
       <button type="button" data-lang="fr" translate="no">FRA</button>
       <button type="button" data-lang="en" translate="no">ENG</button>
@@ -117,15 +108,13 @@ footer .slogan{color:var(--orange);font-size:25px;font-weight:900;letter-spacing
       <p data-i18n="heroDescription">Pon ant Léogâne, Florida ak dyaspora a. Nouvèl, kilti, kominote ak opòtinite.</p>
       <a href="#avatar-ai" class="cta" data-i18n="askQuestionCta">Pale ak Avatar AI a</a>
     </div>
-
-    <!-- ==== AVATAR LA NAN BWAT LA — KOM YON AI KAP REPONN KESYON ==== -->
     <div class="avatar-ai-wrap" id="avatar-ai">
-      <h3 data-i18n="avatarTitle">AVATAR NOU — LÉOGÂNE INFO</h3>
+      <h3 data-i18n="avatarTitle">VIDEO AVATAR — LÉOGÂNE INFO</h3>
       <p class="ai-sub" data-i18n="avatarDescription">Tandé nou sé renmen nou ❤️ — Poze l kesyon, li ap reponn ou LIVE.</p>
       <div class="avatar-bubble" id="avatarBubble" data-i18n="avatarGreeting">💬 Bonjou! Mwen kontan tandé nou, sé renmen nou! ❤️ Poze m yon kesyon.</div>
-      <div class="avatar-frame" id="avatarFrame">
-        <span class="live-dot">● LIVE AI</span>
-        <img src="avatar-q&amp;a.jpg" alt="Avatar AI Léogâne Info">
+      <div class="avatar-video-frame">
+        <span class="live-dot">● LIVE VIDEO</span>
+        <video id="avatarVideo" src="avatar-q%26a.mp4" autoplay muted loop playsinline controls></video>
       </div>
       <div class="ai-input-row">
         <input id="qaInput" type="text" data-i18n-placeholder="questionsPlaceholder" placeholder="Ekri kesyon w la isit la...">
@@ -139,10 +128,9 @@ footer .slogan{color:var(--orange);font-size:25px;font-weight:900;letter-spacing
         <button type="button" data-qa="culture">🎭 <span data-i18n="qaChipCulture">Kilti</span></button>
         <button type="button" data-qa="about">ℹ️ <span data-i18n="qaChipAbout">Kisa LÉOGÂNE ENFO ye?</span></button>
       </div>
-      <div class="avatar-label" data-i18n="avatarLabel">✨ AVATAR AI — FULL BODY AP MACHE — 5'9" ✨</div>
+      <div class="avatar-label" data-i18n="avatarLabel">✨ VIDEO AVATAR AI — AP MACHE — 5'9" ✨</div>
     </div>
   </section>
-
   <section id="news" class="content">
     <h2 data-i18n="newsTitle">NOUVÈL & ENFÒMASYON</h2>
     <p class="section-subtitle" data-i18n="newsDescription">Nouvèl verifye, analiz ak rapò sou Léogâne, Ayiti ak dyaspora a.</p>
@@ -162,9 +150,9 @@ footer .slogan{color:var(--orange);font-size:25px;font-weight:900;letter-spacing
       <a class="social telegram" href="https://t.me/bss1815dmp" target="_blank" rel="noopener"><span class="social-symbol">➤</span><span>Telegram</span></a>
       <a class="social facebook" href="https://www.facebook.com/share/1By3KvYRrM/" target="_blank" rel="noopener"><span class="social-symbol">f</span><span>Facebook</span></a>
       <a class="social instagram" href="https://www.instagram.com/lebaron072/" target="_blank" rel="noopener"><span class="social-symbol">◎</span><span>Instagram</span></a>
-      <a class="social whatsapp" href="https://wa.me/14076405166" target="_blank" rel="noopener"><span class="social-symbol">☎</span><span>WhatsApp</span></a>
+      <a class="social 【entity-whatsapp¦canonical_name=WhatsApp】" href="https://wa.me/14076405166" target="_blank" rel="noopener"><span class="social-symbol">☎</span><span> 【entity-WhatsApp¦canonical_name=WhatsApp】</span></a>
       <a class="social youtube" href="https://www.youtube.com/@BSS1815PROMAXDMP" target="_blank" rel="noopener"><span class="social-symbol">▶</span><span>YouTube</span></a>
-      <a class="social 【entity-spotify¦canonical_name=Spotify】" href="https://open.spotify.com/" target="_blank" rel="noopener"><span class="social-symbol">≋</span><span>【entity-Spotify¦canonical_name=Spotify】</span></a>
+      <a class="social spotify" href="https://open.spotify.com/" target="_blank" rel="noopener"><span class="social-symbol">≋</span><span> Spotify</span></a>
       <a class="social linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener"><span class="social-symbol">in</span><span>LinkedIn</span></a>
       <a class="social xnetwork" href="https://x.com/" target="_blank" rel="noopener"><span class="social-symbol">𝕏</span><span>X</span></a>
       <a class="social truth" href="https://truthsocial.com/" target="_blank" rel="noopener"><span class="social-symbol">T</span><span>Truth Social</span></a>
@@ -191,9 +179,9 @@ footer .slogan{color:var(--orange);font-size:25px;font-weight:900;letter-spacing
 </footer>
 <script>
 const translations = {
-  ht: {home:"Akèy",questions:"Avatar AI",news:"Nouvèl",culture:"Kilti",business:"Biznis",community:"Kominote",social:"Rezo Sosyal",contact:"Kontak",tagline:"YON VWA KI RASANBLE NOU",heroDescription:"Pon ant Léogâne, Florida ak dyaspora a. Nouvèl, kilti, kominote ak opòtinite.",askQuestionCta:"Pale ak Avatar AI a",avatarTitle:"AVATAR NOU — LÉOGÂNE INFO",avatarDescription:"Tandé nou sé renmen nou ❤️ — Poze l kesyon, li ap reponn ou LIVE.",avatarGreeting:"💬 Bonjou! Mwen kontan tandé nou, sé renmen nou! ❤️ Poze m yon kesyon.",avatarSpeak:"▶ KOUTE REPONS LAN",avatarLabel:"✨ AVATAR AI — FULL BODY AP MACHE — 5'9\" ✨",questionsPlaceholder:"Ekri kesyon w la isit la...",questionsButton:"Reponn mwen",qaChipContact:"Kontak",qaChipSocial:"Rezo Sosyal",qaChipBusiness:"Biznis",qaChipAbout:"Kisa LÉOGÂNE ENFO ye?",qaChipCulture:"Kilti",newsTitle:"NOUVÈL & ENFÒMASYON",newsDescription:"Nouvèl verifye, analiz ak rapò sou Léogâne, Ayiti ak dyaspora a.",localNews:"Nouvèl Lokal",localNewsDescription:"Enfòmasyon sou lavi ak aktivite kominote Léogâne.",diasporaNews:"Nouvèl Dyaspora",diasporaDescription:"Enfòmasyon pou kominote ayisyen nan Florida ak lòt kote.",cultureTitle:"KILTI & ERITAJ",cultureDescription:"Rara, istwa Léogâne, mizik, tradisyon ak eritaj kiltirèl.",businessTitle:"ANYÈ BIZNIS",businessDescription:"Yon espas pou prezante biznis Léoganè Ayiti ak dyaspora a.",communityTitle:"KOMINOTE",communityDescription:"Yon platfòm ki rasanble moun Léogâne toupatou nan mond lan.",socialTitle:"REZO SOSYAL LÉOGÂNE ENFO",socialDescription:"Swiv nou sou rezo sosyal nou yo.",contactTitle:"KONTAK LÉOGÂNE ENFO",qaDefault:"Mèsi pou kesyon w la! Pou repons rapid, rele nou nan (407) 640-5166 oubyen ekri nou sou WhatsApp. Ou ka gade tou seksyon Kontak ak Rezo Sosyal yo anba a.",qaContact:"Ou ka kontakte nou: USA (317) 538-1150 — Florida (407) 640-5166 — Ayiti +509 4482-9869 / +509 4254-4447 / +509 4343-7488. WhatsApp: (407) 640-5166",qaSocial:"Swiv nou sou TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP, Spotify, LinkedIn, X ak Truth Social. Tout lyen yo nan seksyon Rezo Sosyal.",qaBusiness:"Ou gen biznis? LÉOGÂNE ENFO ka prezante l nan Anyè Biznis la pou Léogâne, Ayiti ak dyaspora a wè l. Kontakte nou sou WhatsApp (407) 640-5166 pou w enskri biznis ou.",qaCulture:"Kilti Léogâne: Rara, istwa Léogâne, mizik, tradisyon ak eritaj kiltirèl. Se sa nou pataje nan seksyon Kilti & Eritaj.",qaAbout:"LÉOGÂNE ENFO se pon ant Léogâne, Florida ak dyaspora a. Nouvèl, kilti, kominote ak opòtinite. Yon vwa ki rasanble nou — DEVAN DEVAN NÈT!"},
-  fr: {home:"Accueil",questions:"Avatar IA",news:"Actualités",culture:"Culture",business:"Entreprises",community:"Communauté",social:"Réseaux sociaux",contact:"Contact",tagline:"UNE VOIX QUI NOUS RASSEMBLE",heroDescription:"Un pont entre Léogâne, la Floride et la diaspora. Actualités, culture, communauté et opportunités.",askQuestionCta:"Parler à l'Avatar IA",avatarTitle:"NOTRE AVATAR — LÉOGÂNE INFO",avatarDescription:"Nous écouter c'est nous aimer ❤️ — Posez-lui une question, elle vous répond en LIVE.",avatarGreeting:"💬 Bonjour ! Je suis contente de vous entendre, c'est nous aimer ! ❤️ Posez-moi une question.",avatarSpeak:"▶ ÉCOUTER LA RÉPONSE",avatarLabel:"✨ AVATAR IA — PLEIN CORPS EN MARCHE — 5'9\" ✨",questionsPlaceholder:"Écrivez votre question ici...",questionsButton:"Répondez-moi",qaChipContact:"Contact",qaChipSocial:"Réseaux sociaux",qaChipBusiness:"Entreprises",qaChipAbout:"C'est quoi LÉOGÂNE ENFO ?",qaChipCulture:"Culture",newsTitle:"ACTUALITÉS & INFORMATIONS",newsDescription:"Actualités vérifiées, analyses et reportages sur Léogâne, Haïti et la diaspora.",localNews:"Actualités locales",localNewsDescription:"Informations sur la vie et les activités de la communauté de Léogâne.",diasporaNews:"Actualités de la diaspora",diasporaDescription:"Informations pour la communauté haïtienne en Floride et ailleurs.",cultureTitle:"CULTURE & PATRIMOINE",cultureDescription:"Rara, histoire de Léogâne, musique, traditions et patrimoine culturel.",businessTitle:"ANNUAIRE DES ENTREPRISES",businessDescription:"Un espace pour présenter les entreprises de Léogâne, d'Haïti et de la diaspora.",communityTitle:"COMMUNAUTÉ",communityDescription:"Une plateforme qui rassemble les Léogânais du monde entier.",socialTitle:"RÉSEAUX SOCIAUX LÉOGÂNE ENFO",socialDescription:"Suivez-nous sur nos réseaux sociaux.",contactTitle:"CONTACT LÉOGÂNE ENFO",qaDefault:"Merci pour votre question ! Pour une réponse rapide, appelez-nous au (407) 640-5166 ou écrivez-nous sur WhatsApp. Regardez aussi les sections Contact et Réseaux sociaux ci-dessous.",qaContact:"Contactez-nous : USA (317) 538-1150 — Floride (407) 640-5166 — Haïti +509 4482-9869 / +509 4254-4447 / +509 4343-7488. WhatsApp : (407) 640-5166",qaSocial:"Suivez-nous sur TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP, Spotify, LinkedIn, X et Truth Social. Tous les liens sont dans la section Réseaux sociaux.",qaBusiness:"Vous avez une entreprise ? LÉOGÂNE ENFO peut la présenter dans l'Annuaire des entreprises pour Léogâne, Haïti et la diaspora. Contactez-nous sur WhatsApp (407) 640-5166 pour inscrire votre entreprise.",qaCulture:"Culture de Léogâne : Rara, histoire de Léogâne, musique, traditions et patrimoine culturel. C'est ce que nous partageons dans la section Culture & Patrimoine.",qaAbout:"LÉOGÂNE ENFO est un pont entre Léogâne, la Floride et la diaspora. Actualités, culture, communauté et opportunités. Une voix qui nous rassemble — DEVAN DEVAN NÈT !"},
-  en: {home:"Home",questions:"Avatar AI",news:"News",culture:"Culture",business:"Business",community:"Community",social:"Social Networks",contact:"Contact",tagline:"A VOICE THAT BRINGS US TOGETHER",heroDescription:"Connecting Léogâne, Florida and the diaspora through news, culture, community and opportunities.",askQuestionCta:"Talk to the Avatar AI",avatarTitle:"OUR AVATAR — LEOGANE INFO",avatarDescription:"Hearing us is loving us ❤️ — Ask her a question, she answers you LIVE.",avatarGreeting:"💬 Hello! I'm so happy to hear you, hearing us is loving us! ❤️ Ask me a question.",avatarSpeak:"▶ LISTEN TO THE ANSWER",avatarLabel:"✨ AVATAR AI — FULL BODY WALKING — 5'9\" ✨",questionsPlaceholder:"Type your question here...",questionsButton:"Answer me",qaChipContact:"Contact",qaChipSocial:"Social Networks",qaChipBusiness:"Business",qaChipAbout:"What is LÉOGÂNE ENFO?",qaChipCulture:"Culture",newsTitle:"NEWS & INFORMATION",newsDescription:"Verified news, analysis and reporting about Léogâne, Haiti and the diaspora.",localNews:"Local News",localNewsDescription:"Updates on life and activities in the Léogâne community.",diasporaNews:"Diaspora News",diasporaDescription:"Information for Haitian communities in Florida and beyond.",cultureTitle:"CULTURE & HERITAGE",cultureDescription:"Rara, Léogâne history, music, traditions and cultural heritage.",businessTitle:"BUSINESS DIRECTORY",businessDescription:"A place to showcase businesses from Léogâne, Haiti and the diaspora.",communityTitle:"COMMUNITY",communityDescription:"A platform connecting people from Léogâne around the world.",socialTitle:"LÉOGÂNE ENFO SOCIAL NETWORKS",socialDescription:"Follow our social media channels.",contactTitle:"CONTACT LÉOGÂNE ENFO",qaDefault:"Thanks for your question! For a fast answer, call us at (407) 640-5166 or message us on WhatsApp. Also check the Contact and Social Networks sections below.",qaContact:"Contact us: USA (317) 538-1150 — Florida (407) 640-5166 — Haiti +509 4482-9869 / +509 4254-4447 / +509 4343-7488. WhatsApp: (407) 640-5166",qaSocial:"Follow us on TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP, Spotify, LinkedIn, X and Truth Social. All links are in the Social Networks section.",qaBusiness:"Do you have a business? LÉOGÂNE ENFO can feature it in the Business Directory for Léogâne, Haiti and the diaspora to see. Contact us on WhatsApp (407) 640-5166 to register your business.",qaCulture:"Léogâne culture: Rara, Léogâne history, music, traditions and cultural heritage. That's what we share in the Culture & Heritage section.",qaAbout:"LÉOGÂNE ENFO is a bridge between Léogâne, Florida and the diaspora. News, culture, community and opportunities. A voice that brings us together — DEVAN DEVAN NÈT!"}
+  ht: {home:"Akèy",questions:"Avatar AI",news:"Nouvèl",culture:"Kilti",business:"Biznis",community:"Kominote",social:"Rezo Sosyal",contact:"Kontak",tagline:"YON VWA KI RASANBLE NOU",heroDescription:"Pon ant Léogâne, Florida ak dyaspora a. Nouvèl, kilti, kominote ak opòtinite.",askQuestionCta:"Pale ak Avatar AI a",avatarTitle:"VIDEO AVATAR — LÉOGÂNE INFO",avatarDescription:"Tandé nou sé renmen nou ❤️ — Poze l kesyon, li ap reponn ou LIVE.",avatarGreeting:"💬 Bonjou! Mwen kontan tandé nou, sé renmen nou! ❤️ Poze m yon kesyon.",avatarSpeak:"▶ KOUTE REPONS LAN",avatarLabel:"✨ VIDEO AVATAR AI — AP MACHE — 5'9\" ✨",questionsPlaceholder:"Ekri kesyon w la isit la...",questionsButton:"Reponn mwen",qaChipContact:"Kontak",qaChipSocial:"Rezo Sosyal",qaChipBusiness:"Biznis",qaChipAbout:"Kisa LÉOGÂNE ENFO ye?",qaChipCulture:"Kilti",newsTitle:"NOUVÈL & ENFÒMASYON",newsDescription:"Nouvèl verifye, analiz ak rapò sou Léogâne, Ayiti ak dyaspora a.",localNews:"Nouvèl Lokal",localNewsDescription:"Enfòmasyon sou lavi ak aktivite kominote Léogâne.",diasporaNews:"Nouvèl Dyaspora",diasporaDescription:"Enfòmasyon pou kominote ayisyen nan Florida ak lòt kote.",cultureTitle:"KILTI & ERITAJ",cultureDescription:"Rara, istwa Léogâne, mizik, tradisyon ak eritaj kiltirèl.",businessTitle:"ANYÈ BIZNIS",businessDescription:"Yon espas pou prezante biznis Léoganè Ayiti ak dyaspora a.",communityTitle:"KOMINOTE",communityDescription:"Yon platfòm ki rasanble moun Léogâne toupatou nan mond lan.",socialTitle:"REZO SOSYAL LÉOGÂNE ENFO",socialDescription:"Swiv nou sou rezo sosyal nou yo.",contactTitle:"KONTAK LÉOGÂNE ENFO",qaDefault:"Mèsi pou kesyon w la! Pou repons rapid, rele nou nan (407) 640-5166 oubyen ekri nou sou WhatsApp.",qaContact:"Ou ka kontakte nou: USA (317) 538-1150 — Florida (407) 640-5166 — Ayiti +509 4482-9869 / +509 4254-4447 / +509 4343-7488. WhatsApp: (407) 640-5166",qaSocial:"Swiv nou sou TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP, Spotify, LinkedIn, X ak Truth Social.",qaBusiness:"Ou gen biznis? LÉOGÂNE ENFO ka prezante l nan Anyè Biznis la. Kontakte nou sou WhatsApp (407) 640-5166 pou w enskri biznis ou.",qaCulture:"Kilti Léogâne: Rara, istwa Léogâne, mizik, tradisyon ak eritaj kiltirèl.",qaAbout:"LÉOGÂNE ENFO se pon ant Léogâne, Florida ak dyaspora a. Nouvèl, kilti, kominote ak opòtinite. Yon vwa ki rasanble nou — DEVAN DEVAN NÈT!"},
+  fr: {home:"Accueil",questions:"Avatar IA",news:"Actualités",culture:"Culture",business:"Entreprises",community:"Communauté",social:"Réseaux sociaux",contact:"Contact",tagline:"UNE VOIX QUI NOUS RASSEMBLE",heroDescription:"Un pont entre Léogâne, la Floride et la diaspora.",askQuestionCta:"Parler à l'Avatar IA",avatarTitle:"VIDÉO AVATAR — LÉOGÂNE INFO",avatarDescription:"Nous écouter c'est nous aimer ❤️ — Posez-lui une question, elle vous répond en LIVE.",avatarGreeting:"💬 Bonjour ! Je suis contente de vous entendre, c'est nous aimer ! ❤️ Posez-moi une question.",avatarSpeak:"▶ ÉCOUTER LA RÉPONSE",avatarLabel:"✨ VIDÉO AVATAR IA — EN MARCHE — 5'9\" ✨",questionsPlaceholder:"Écrivez votre question ici...",questionsButton:"Répondez-moi",qaChipContact:"Contact",qaChipSocial:"Réseaux sociaux",qaChipBusiness:"Entreprises",qaChipAbout:"C'est quoi LÉOGÂNE ENFO ?",qaChipCulture:"Culture",newsTitle:"ACTUALITÉS & INFORMATIONS",newsDescription:"Actualités vérifiées sur Léogâne, Haïti et la diaspora.",localNews:"Actualités locales",localNewsDescription:"Informations sur la vie de la communauté de Léogâne.",diasporaNews:"Actualités de la diaspora",diasporaDescription:"Informations pour la communauté haïtienne en Floride et ailleurs.",cultureTitle:"CULTURE & PATRIMOINE",cultureDescription:"Rara, histoire de Léogâne, musique, traditions.",businessTitle:"ANNUAIRE DES ENTREPRISES",businessDescription:"Un espace pour présenter les entreprises de Léogâne, d'Haïti et de la diaspora.",communityTitle:"COMMUNAUTÉ",communityDescription:"Une plateforme qui rassemble les Léogânais du monde entier.",socialTitle:"RÉSEAUX SOCIAUX LÉOGÂNE ENFO",socialDescription:"Suivez-nous sur nos réseaux sociaux.",contactTitle:"CONTACT LÉOGÂNE ENFO",qaDefault:"Merci pour votre question ! Pour une réponse rapide, appelez-nous au (407) 640-5166 ou écrivez-nous sur WhatsApp.",qaContact:"Contactez-nous : USA (317) 538-1150 — Floride (407) 640-5166 — Haïti +509 4482-9869 / +509 4254-4447 / +509 4343-7488. WhatsApp : (407) 640-5166",qaSocial:"Suivez-nous sur TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP, Spotify, LinkedIn, X et Truth Social.",qaBusiness:"Vous avez une entreprise ? LÉOGÂNE ENFO peut la présenter dans l'Annuaire. Contactez-nous sur WhatsApp (407) 640-5166.",qaCulture:"Culture de Léogâne : Rara, histoire, musique, traditions.",qaAbout:"LÉOGÂNE ENFO est un pont entre Léogâne, la Floride et la diaspora. Une voix qui nous rassemble — DEVAN DEVAN NÈT !"},
+  en: {home:"Home",questions:"Avatar AI",news:"News",culture:"Culture",business:"Business",community:"Community",social:"Social Networks",contact:"Contact",tagline:"A VOICE THAT BRINGS US TOGETHER",heroDescription:"Connecting Léogâne, Florida and the diaspora.",askQuestionCta:"Talk to the Avatar AI",avatarTitle:"VIDEO AVATAR — LEOGANE INFO",avatarDescription:"Hearing us is loving us ❤️ — Ask her a question, she answers you LIVE.",avatarGreeting:"💬 Hello! I'm so happy to hear you, hearing us is loving us! ❤️ Ask me a question.",avatarSpeak:"▶ LISTEN TO THE ANSWER",avatarLabel:"✨ VIDEO AVATAR AI — WALKING — 5'9\" ✨",questionsPlaceholder:"Type your question here...",questionsButton:"Answer me",qaChipContact:"Contact",qaChipSocial:"Social Networks",qaChipBusiness:"Business",qaChipAbout:"What is LÉOGÂNE ENFO?",qaChipCulture:"Culture",newsTitle:"NEWS & INFORMATION",newsDescription:"Verified news about Léogâne, Haiti and the diaspora.",localNews:"Local News",localNewsDescription:"Updates on life in the Léogâne community.",diasporaNews:"Diaspora News",diasporaDescription:"Information for Haitian communities in Florida and beyond.",cultureTitle:"CULTURE & HERITAGE",cultureDescription:"Rara, Léogâne history, music, traditions.",businessTitle:"BUSINESS DIRECTORY",businessDescription:"A place to showcase businesses from Léogâne, Haiti and the diaspora.",communityTitle:"COMMUNITY",communityDescription:"A platform connecting people from Léogâne around the world.",socialTitle:"LÉOGÂNE ENFO SOCIAL NETWORKS",socialDescription:"Follow our social media channels.",contactTitle:"CONTACT LÉOGÂNE ENFO",qaDefault:"Thanks for your question! For a fast answer, call us at (407) 640-5166 or message us on WhatsApp.",qaContact:"Contact us: USA (317) 538-1150 — Florida (407) 640-5166 — Haiti +509 4482-9869 / +509 4254-4447 / +509 4343-7488. WhatsApp: (407) 640-5166",qaSocial:"Follow us on TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP, Spotify, LinkedIn, X and Truth Social.",qaBusiness:"Do you have a business? LÉOGÂNE ENFO can feature it in the Business Directory. Contact us on WhatsApp (407) 640-5166.",qaCulture:"Léogâne culture: Rara, Léogâne history, music, traditions.",qaAbout:"LÉOGÂNE ENFO is a bridge between Léogâne, Florida and the diaspora. A voice that brings us together — DEVAN DEVAN NÈT!"}
 };
 const languageButtons = document.querySelectorAll("[data-lang]");
 let currentLanguage = "ht";
@@ -205,7 +193,7 @@ function changeLanguage(lang){
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n; if(translations[lang][k]) el.textContent=translations[lang][k];});
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{const k=el.dataset.i18nPlaceholder; if(translations[lang][k]) el.placeholder=translations[lang][k];});
-  languageButtons.forEach(btn=>{const code=btn.dataset.lang; btn.textContent=langLabels[code]; const s=code===lang; btn.classList.toggle("active",s); btn.setAttribute("aria-pressed",String(s));});
+  languageButtons.forEach(btn=>{const code=btn.dataset.lang; btn.textContent=langLabels[code]; const s=code===lang; btn.classList.toggle("active",s);});
   if(lastQaKey){ const map={contact:"qaContact",social:"qaSocial",business:"qaBusiness",culture:"qaCulture",about:"qaAbout"}; const tKey=map[lastQaKey]||"qaDefault"; currentAnswer=translations[currentLanguage][tKey]; document.getElementById("avatarBubble").textContent="💬 "+currentAnswer; }
   try{localStorage.setItem("leogane-enfo-language",lang);}catch(e){}
 }
@@ -218,23 +206,18 @@ function speakText(text){
     window.speechSynthesis.speak(u);
   }catch(e){}
 }
-function speakCurrent(){ if(currentAnswer) speakText(currentAnswer); else speakText(translations[currentLanguage].avatarGreeting.replace("💬 ","")); }
-function avatarAnswer(text){
-  currentAnswer=text;
-  const frame=document.getElementById("avatarFrame");
-  const bubble=document.getElementById("avatarBubble");
-  bubble.textContent="💬 "+text;
-  frame.classList.add("talking");
-  speakText(text);
-  setTimeout(()=>{frame.classList.remove("talking");}, Math.min(9000, 3000 + text.length*35));
-}
+function speakCurrent(){ if(currentAnswer) speakText(currentAnswer); }
 let lastQaKey="";
 function showQaAnswer(key){
   lastQaKey=key;
   const map={contact:"qaContact",social:"qaSocial",business:"qaBusiness",culture:"qaCulture",about:"qaAbout"};
   const tKey=map[key]||"qaDefault";
   const text=translations[currentLanguage][tKey]||translations[currentLanguage].qaDefault;
-  avatarAnswer(text);
+  currentAnswer=text;
+  document.getElementById("avatarBubble").textContent="💬 "+text;
+  const v=document.getElementById("avatarVideo");
+  if(v){ v.muted=false; v.play(); }
+  speakText(text);
 }
 function answerFromText(text){
   const t=(text||"").toLowerCase();
@@ -255,8 +238,8 @@ document.getElementById("qaInput").addEventListener("keydown",(e)=>{if(e.key==="
 document.querySelectorAll("[data-qa]").forEach(btn=>{btn.addEventListener("click",()=>showQaAnswer(btn.dataset.qa));});
 languageButtons.forEach(btn=>{btn.addEventListener("click",()=>changeLanguage(btn.dataset.lang));});
 const menuToggle=document.getElementById("menuToggle"); const mainNav=document.getElementById("mainNav");
-menuToggle.addEventListener("click",()=>{const o=mainNav.classList.toggle("open"); menuToggle.setAttribute("aria-expanded",String(o));});
-mainNav.querySelectorAll("a").forEach(l=>{l.addEventListener("click",()=>{mainNav.classList.remove("open"); menuToggle.setAttribute("aria-expanded","false");});});
+menuToggle.addEventListener("click",()=>{mainNav.classList.toggle("open");});
+mainNav.querySelectorAll("a").forEach(l=>{l.addEventListener("click",()=>{mainNav.classList.remove("open");});});
 document.getElementById("year").textContent=new Date().getFullYear();
 let savedLanguage="ht"; try{savedLanguage=localStorage.getItem("leogane-enfo-language")||"ht";}catch(e){}
 changeLanguage(savedLanguage);
