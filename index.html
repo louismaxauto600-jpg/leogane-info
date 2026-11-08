@@ -24,47 +24,44 @@
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LÉOGÂNE ENFO</title>
+<title>LEOGANE ENFO</title>
 <style>
-body{margin:0;font-family:Arial,sans-serif;color:#ffb366;background:#080300;line-height:1.6}
-header{background:#080300;border-bottom:2px solid #ff7900;padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
-header strong{color:#ffce8c;font-size:24px} header small{color:#ff7900;font-size:10px;letter-spacing:2px}
+body{margin:0;font-family:Arial,sans-serif;color:#ffb366;background:#080300}
+header{padding:12px 20px;border-bottom:2px solid #ff7900}
 .hero{max-width:900px;margin:auto;padding:40px 20px;text-align:center}
-.hero h1{color:#ffce8c;font-size:56px;margin:10px 0}
-.avatar-wrap{max-width:600px;margin:20px auto;padding:20px;border:2px solid #ff7900;border-radius:20px;background:#2d1000}
-.avatar-bubble{background:#1a0a00;color:#ffce8c;padding:14px;border-radius:14px;border:1px solid #ff7900;margin:0 0 14px;font-weight:700}
-.avatar-video-frame{width:100%;aspect-ratio:1/1;background:#000;border:3px solid #ff7900;border-radius:20px;overflow:hidden}
-.avatar-video-frame video{width:100%;height:100%;object-fit:cover;display:block}
-.sound-btn{cursor:pointer;width:100%;margin-top:12px;background:#ff7900;color:#100500;font-weight:900;border:none;border-radius:12px;padding:14px}
-.ai-row{display:flex;gap:10px;margin-top:14px} .ai-row input{flex:1;padding:14px;border-radius:12px;border:1px solid #ff7900;background:#140700;color:#fff} .ai-row button{background:#ff7900;color:#100500;font-weight:900;border:none;border-radius:12px;padding:14px 20px;cursor:pointer}
-section{max-width:900px;margin:auto;padding:40px 20px;border-top:1px solid rgba(255,140,20,.38)} section h2{color:#ffce8c}
-.social{display:flex;flex-wrap:wrap;gap:10px} .social a{color:#ffb366;text-decoration:none;border:1px solid #ff7900;border-radius:12px;padding:10px 14px}
-footer{text-align:center;padding:40px 20px;border-top:2px solid #ff7900} .slogan{color:#ff7900;font-weight:900;letter-spacing:2px}
+.hero h1{color:#ffce8c;font-size:56px}
+.wrap{max-width:600px;margin:20px auto;padding:20px;border:2px solid #ff7900;border-radius:20px;background:#2d1000}
+.bubble{background:#1a0a00;color:#ffce8c;padding:14px;border-radius:14px;border:1px solid #ff7900;margin:0 0 14px;font-weight:700}
+.frame{width:100%;aspect-ratio:1/1;background:#000;border:3px solid #ff7900;border-radius:20px;overflow:hidden;position:relative}
+.frame video{width:100%;height:100%;object-fit:cover;display:block}
+.btn{cursor:pointer;width:100%;margin-top:12px;background:#ff7900;color:#100500;font-weight:900;border:none;border-radius:12px;padding:14px}
+.row{display:flex;gap:10px;margin-top:14px}.row input{flex:1;padding:14px;border-radius:12px;border:1px solid #ff7900;background:#140700;color:#fff}.row button{background:#ff7900;color:#100500;font-weight:900;border:none;border-radius:12px;padding:14px 20px;cursor:pointer}
+section{max-width:900px;margin:auto;padding:40px 20px;border-top:1px solid rgba(255,140,20,.38)}section h2{color:#ffce8c}
+footer{text-align:center;padding:40px 20px;border-top:2px solid #ff7900}
 </style>
 </head>
 <body>
-<header><div><strong>LÉOGÂNE ENFO</strong><br><small>BSS1815 PRO-MAX DMP</small></div><div>KRE | FRA | ENG</div></header>
+<header><strong>LEOGANE ENFO</strong></header>
 <main>
-<section class="hero"><h1>LÉOGÂNE ENFO</h1><p>YON VWA KI RASANBLE NOU</p></section>
-<div class="avatar-wrap">
-<div class="avatar-bubble" id="avatarBubble">BONJOUR BONSOIR LÉOGÂNE INFO ÉCOUTEZ-NOUS, C’EST DÉJÀ NOUS AIMER</div>
-<div class="avatar-video-frame"><video id="avatarVideo" src="avatar-qa.mp4" autoplay muted loop playsinline></video></div>
-<button id="soundBtn" class="sound-btn" type="button" onclick="toggleVideoSound()">🔊 TANDE VWA A</button>
-<div class="ai-row"><input id="qaInput" type="text" placeholder="Ekri kesyon w la isit la..."><button id="qaBtn" type="button">Reponn mwen</button></div>
+<section class="hero"><h1>LEOGANE ENFO</h1><p>YON VWA KI RASANBLE NOU</p></section>
+<div class="wrap">
+<div class="bubble" id="avatarBubble">BONJOUR BONSOIR LÉOGÂNE INFO, ÉCOUTEZ-NOUS, C’EST DÉJÀ NOUS AIMER</div>
+<div class="frame"><video id="avatarVideo" src="avatar-qa.mp4" autoplay muted loop playsinline></video></div>
+<button id="soundBtn" class="btn" type="button" onclick="toggleSound()">🔊 TANDE VWA A</button>
+<div class="row"><input id="qaInput" type="text" placeholder="Ekri kesyon w la..."><button id="qaBtn" type="button">Reponn mwen</button></div>
 </div>
-<section><h2>NOUVÈL</h2><p>Nouvèl verifye sou Léogâne, Ayiti ak dyaspora a.</p></section>
-<section><h2>KILTI</h2><p>Rara, istwa Léogâne, mizik, tradisyon.</p></section>
-<section><h2>REZO SOSYAL</h2><div class="social"><a href="https://www.tiktok.com/@y_me11">TikTok</a><a href="https://t.me/bss1815dmp">Telegram</a><a href="https://www.facebook.com/share/1By3KvYRrM/">Facebook</a><a href="https://www.instagram.com/lebaron072/">Instagram</a><a href="https://wa.me/14076405166">WhatsApp</a><a href="https://www.youtube.com/@BSS1815PROMAXDMP">YouTube</a></div></section>
-<section><h2>KONTAK</h2><p>USA (317) 538-1150 — Florida (407) 640-5166 — Ayiti +509 4482-9869 / +509 4254-4447 / +509 4343-7488</p></section>
+<section><h2>NOUVEL</h2><p>Nouvel verifye sou Leogane, Ayiti ak dyaspora a.</p></section>
+<section><h2>KILTI</h2><p>Rara, istwa Leogane, mizik, tradisyon.</p></section>
+<section><h2>KONTAK</h2><p>USA (317) 538-1150 — Florida (407) 640-5166 — Ayiti +509 4482-9869</p></section>
 </main>
-<footer><p>LÉOGÂNE ENFO — BSS1815 PRO-MAX DMP</p><div class="slogan">DEVAN DEVAN NÈT!</div></footer>
+<footer><p>LEOGANE ENFO — DEVAN DEVAN NET!</p></footer>
 <script>
 let on=false;
-function toggleVideoSound(){ const v=document.getElementById("avatarVideo"); const b=document.getElementById("soundBtn"); if(!v) return; on=!on; v.muted=!on; v.volume=1; if(on){ v.play(); b.textContent="🔇 FÈMEN VWA A"; } else { b.textContent="🔊 TANDE VWA A"; } }
-function showQa(key){ const m={contact:"USA (317) 538-1150 — Florida (407) 640-5166 — Ayiti +509 4482-9869 / +509 4254-4447 / +509 4343-7488",social:"TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP",business:"Kontakte nou sou WhatsApp (407) 640-5166 pou biznis ou.",culture:"Kilti Léogâne: Rara, istwa, mizik, tradisyon.",about:"LÉOGÂNE ENFO — Yon vwa ki rasanble nou."}; document.getElementById("avatarBubble").textContent=m[key]||"Mèsi pou kesyon w la! Rele nou nan (407) 640-5166."; }
-function ans(t){ t=(t||"").toLowerCase(); if(t.includes("kontak")||t.includes("contact")||t.includes("phone")||t.includes("whatsapp")) return "contact"; if(t.includes("rezo")||t.includes("social")||t.includes("tiktok")||t.includes("facebook")||t.includes("instagram")) return "social"; if(t.includes("biznis")||t.includes("business")) return "business"; if(t.includes("kilti")||t.includes("culture")||t.includes("rara")) return "culture"; return "about"; }
-document.getElementById("qaBtn").addEventListener("click",()=>{ const v=document.getElementById("qaInput").value.trim(); showQa(ans(v)); document.getElementById("qaInput").value=""; });
-document.getElementById("qaInput").addEventListener("keydown",(e)=>{if(e.key==="Enter") document.getElementById("qaBtn").click();});
+function toggleSound(){const v=document.getElementById("avatarVideo");const b=document.getElementById("soundBtn");if(!v)return;on=!on;v.muted=!on;v.volume=1;if(on){v.play();b.textContent="🔇 FEMEN VWA A";}else{b.textContent="🔊 TANDE VWA A";}}
+function showQa(k){const m={contact:"USA (317) 538-1150 — Florida (407) 640-5166 — Ayiti +509 4482-9869",social:"TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube",business:"Kontakte nou sou WhatsApp (407) 640-5166",culture:"Kilti Leogane: Rara, istwa, mizik.",about:"LEOGANE ENFO — Yon vwa ki rasanble nou."};document.getElementById("avatarBubble").textContent=m[k]||"Mesi pou kesyon w la! Rele nou nan (407) 640-5166.";}
+function ans(t){t=(t||"").toLowerCase();if(t.includes("kontak")||t.includes("contact")||t.includes("phone"))return "contact";if(t.includes("rezo")||t.includes("social")||t.includes("tiktok"))return "social";if(t.includes("biznis")||t.includes("business"))return "business";if(t.includes("kilti")||t.includes("culture"))return "culture";return "about";}
+document.getElementById("qaBtn").addEventListener("click",()=>{const v=document.getElementById("qaInput").value.trim();showQa(ans(v));document.getElementById("qaInput").value="";});
+document.getElementById("qaInput").addEventListener("keydown",(e)=>{if(e.key==="Enter")document.getElementById("qaBtn").click();});
 </script>
 <script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
 </html>
