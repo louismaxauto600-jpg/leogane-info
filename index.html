@@ -24,138 +24,47 @@
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#100600">
-<title>LÉOGÂNE ENFO | BSS1815 PRO-MAX DMP</title>
-<link rel="icon" href="léogâne-enfo.png" type="image/png">
+<title>LÉOGÂNE ENFO</title>
 <style>
-:root{--orange:#ff7900;--apricot:#ffb366;--gold:#ffce8c;--line:rgba(255,140,20,.38);--muted:#d49b65}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--apricot);background:linear-gradient(145deg,#080300 0%,#321100 42%,#110500 70%,#080300 100%);background-attachment:fixed;line-height:1.6}
-a{color:inherit} button{font:inherit}
-header{position:sticky;top:0;z-index:20;background:linear-gradient(90deg,#080300,#2d1000,#080300);border-bottom:2px solid var(--orange)}
-.header-inner{max-width:1250px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo-wrap{width:68px;height:68px;flex-shrink:0;display:grid;place-items:center;border:2px solid var(--orange);border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#ff9b2e,#190800)}
-.logo-wrap img{width:100%;height:100%;object-fit:contain}
-.brand strong{display:block;color:var(--gold);font-size:clamp(20px,2.5vw,30px)}
-.brand small{color:var(--orange);font-size:10px;font-weight:900;letter-spacing:2px}
-nav{display:flex;flex-wrap:wrap;gap:5px} nav a{text-decoration:none;font-size:12px;font-weight:bold;padding:9px 10px;border-radius:8px} nav a:hover{color:#100500;background:var(--apricot)}
-.languages{display:flex;gap:5px} .languages button{cursor:pointer;border:1px solid var(--orange);background:#140700;color:var(--apricot);border-radius:8px;padding:9px 12px;font-weight:900} .languages button.active{background:linear-gradient(135deg,var(--apricot),var(--orange));color:#100500}
-.menu-toggle{display:none;border:1px solid var(--orange);color:var(--apricot);background:#160800;border-radius:8px;padding:8px 13px;cursor:pointer}
-main{overflow:hidden}
-.hero{max-width:1250px;margin:auto;padding:70px 22px 20px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px}
-.eyebrow{font-size:12px;font-weight:900;letter-spacing:2px;color:var(--orange)}
-.hero h1{font-size:clamp(46px,7vw,92px);line-height:1;color:var(--gold);margin:18px 0}
-.hero h2{color:var(--orange);font-size:clamp(19px,3vw,31px)}
-.cta{display:inline-block;background:linear-gradient(135deg,var(--apricot),var(--orange));color:#100500;font-weight:900;text-decoration:none;border-radius:30px;padding:13px 25px;margin-top:15px}
-.avatar-ai-wrap{padding:24px;border-radius:24px;border:2px solid var(--orange);background:linear-gradient(145deg,#3a1500,#080300)}
-.avatar-ai-wrap h3{color:var(--gold);font-size:clamp(22px,3vw,28px);margin:0 0 8px;text-align:center}
-.ai-sub{color:var(--muted);margin:0 0 14px;text-align:center;font-size:14px}
-.avatar-bubble{background:linear-gradient(145deg,#1a0a00,#2d1000);color:var(--gold);font-weight:700;font-size:15px;line-height:1.5;padding:14px 16px;border-radius:14px;border:1px solid var(--orange);margin:0 0 14px;min-height:58px}
-.avatar-video-frame{width:100%;aspect-ratio:1/1;background:#000;border:3px solid var(--orange);border-radius:20px;overflow:hidden;position:relative}
-.avatar-video-frame video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
-.live-dot{position:absolute;top:12px;left:12px;background:#ff2020;color:#fff;font-size:11px;font-weight:900;padding:5px 10px;border-radius:20px;z-index:2}
-.sound-btn{cursor:pointer;display:block;width:100%;margin-top:12px;background:linear-gradient(135deg,#ffb366,#ff7900);color:#100500;font-weight:900;font-size:15px;border:none;border-radius:12px;padding:14px 20px}
-.ai-input-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.ai-input-row input{flex:1;min-width:180px;padding:14px 16px;border-radius:12px;border:1px solid var(--orange);background:#140700;color:#fff;font-size:16px;outline:none}
-.ai-input-row input::placeholder{color:var(--muted)}
-.ai-btn{cursor:pointer;border:none;background:linear-gradient(135deg,var(--apricot),var(--orange));color:#100500;font-weight:900;border-radius:12px;padding:14px 20px}
-.ai-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;justify-content:center}
-.ai-chips button{cursor:pointer;border:1px solid var(--orange);background:#140700;color:var(--apricot);border-radius:30px;padding:8px 14px;font-size:13px;font-weight:700}
-.avatar-label{margin-top:12px;font-weight:900;color:var(--apricot);font-size:14px;text-align:center}
-section.content{max-width:1250px;margin:auto;padding:65px 22px;border-top:1px solid var(--line)}
-section.content h2{color:var(--gold);font-size:clamp(26px,4vw,39px);margin:0 0 12px}
-.section-subtitle{color:var(--muted);margin-bottom:25px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.card{background:linear-gradient(135deg,rgba(255,128,0,.16),rgba(8,3,0,.88));border:1px solid var(--line);border-radius:18px;padding:24px}
-.social-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-.social{min-height:105px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-decoration:none;border:2px solid var(--social-color,var(--orange));background:linear-gradient(150deg,#180800,#080300);border-radius:15px;font-size:13px;font-weight:900;color:var(--social-color,var(--apricot))}
-.instagram{border-color:#c13584;color:#f77737;background:linear-gradient(#110600,#110600) padding-box,linear-gradient(40deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5) border-box;border:2px solid transparent}
-.tiktok{--social-color:#35e5df} .telegram{--social-color:#30b9ed} .facebook{--social-color:#2684ff} .whatsapp{--social-color:#25d366} .youtube{--social-color:#ff3030} .spotify{--social-color:#1ed760} .linkedin{--social-color:#2b9bd8} .xnetwork{--social-color:#d6a16b} .truth{--social-color:#a779e9}
-.social-symbol{font-size:30px;font-weight:900;line-height:1}
-.contact-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-.contact-card{text-decoration:none;text-align:center;padding:19px 10px;border:1px solid var(--orange);border-radius:15px;background:linear-gradient(145deg,#301000,#090300);display:flex;flex-direction:column;gap:9px;justify-content:center}
-.contact-card span{font-size:13px} .contact-card strong{font-size:clamp(12px,1.5vw,16px);color:var(--gold);overflow-wrap:anywhere}
-footer{text-align:center;padding:55px 20px;border-top:2px solid var(--orange);background:linear-gradient(180deg,#251000,#080300)}
-.footer-logo{width:110px;height:110px;margin:0 auto 20px;border:2px solid var(--orange);border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#ff9b2e,#170600);display:grid;place-items:center}
-.footer-logo img{width:100%;height:100%;object-fit:contain}
-footer h2{color:var(--gold)} footer p{color:var(--muted)}
-footer .slogan{color:var(--orange);font-size:25px;font-weight:900;letter-spacing:2px}
-@media(max-width:1050px){.hero{grid-template-columns:1fr} .social-grid{grid-template-columns:repeat(3,1fr)} .contact-grid{grid-template-columns:repeat(3,1fr)} .menu-toggle{display:block} nav{display:none;width:100%;order:5;flex-direction:column;background:#140600;border:1px solid var(--line);padding:12px;border-radius:12px} nav.open{display:flex}}
-@media(max-width:600px){.hero{padding:40px 16px} .social-grid{grid-template-columns:repeat(2,1fr)} .contact-grid{grid-template-columns:1fr} section.content{padding:45px 16px}}
+body{margin:0;font-family:Arial,sans-serif;color:#ffb366;background:#080300;line-height:1.6}
+header{background:#080300;border-bottom:2px solid #ff7900;padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
+header strong{color:#ffce8c;font-size:24px} header small{color:#ff7900;font-size:10px;letter-spacing:2px}
+.hero{max-width:900px;margin:auto;padding:40px 20px;text-align:center}
+.hero h1{color:#ffce8c;font-size:56px;margin:10px 0}
+.avatar-wrap{max-width:600px;margin:20px auto;padding:20px;border:2px solid #ff7900;border-radius:20px;background:#2d1000}
+.avatar-bubble{background:#1a0a00;color:#ffce8c;padding:14px;border-radius:14px;border:1px solid #ff7900;margin:0 0 14px;font-weight:700}
+.avatar-video-frame{width:100%;aspect-ratio:1/1;background:#000;border:3px solid #ff7900;border-radius:20px;overflow:hidden}
+.avatar-video-frame video{width:100%;height:100%;object-fit:cover;display:block}
+.sound-btn{cursor:pointer;width:100%;margin-top:12px;background:#ff7900;color:#100500;font-weight:900;border:none;border-radius:12px;padding:14px}
+.ai-row{display:flex;gap:10px;margin-top:14px} .ai-row input{flex:1;padding:14px;border-radius:12px;border:1px solid #ff7900;background:#140700;color:#fff} .ai-row button{background:#ff7900;color:#100500;font-weight:900;border:none;border-radius:12px;padding:14px 20px;cursor:pointer}
+section{max-width:900px;margin:auto;padding:40px 20px;border-top:1px solid rgba(255,140,20,.38)} section h2{color:#ffce8c}
+.social{display:flex;flex-wrap:wrap;gap:10px} .social a{color:#ffb366;text-decoration:none;border:1px solid #ff7900;border-radius:12px;padding:10px 14px}
+footer{text-align:center;padding:40px 20px;border-top:2px solid #ff7900} .slogan{color:#ff7900;font-weight:900;letter-spacing:2px}
 </style>
 </head>
 <body>
-<header><div class="header-inner">
-<a href="#home" class="brand"><div class="logo-wrap"><img src="léogâne-enfo.png" alt="Logo LÉOGÂNE ENFO" onerror="this.style.display='none'"></div><div><strong>LÉOGÂNE ENFO</strong><small>BSS1815 PRO-MAX DMP</small></div></a>
-<button id="menuToggle" class="menu-toggle" type="button">☰</button>
-<nav id="mainNav"><a href="#home">Akèy</a><a href="#avatar-ai">Avatar AI</a><a href="#news">Nouvèl</a><a href="#culture">Kilti</a><a href="#business">Biznis</a><a href="#community">Kominote</a><a href="#social">Rezo Sosyal</a><a href="#contact">Kontak</a></nav>
-<div class="languages"><button type="button" data-lang="ht" class="active">KRE</button><button type="button" data-lang="fr">FRA</button><button type="button" data-lang="en">ENG</button></div>
-</div></header>
+<header><div><strong>LÉOGÂNE ENFO</strong><br><small>BSS1815 PRO-MAX DMP</small></div><div>KRE | FRA | ENG</div></header>
 <main>
-<section id="home" class="hero">
-<div><div class="eyebrow">BSS1815 PRO-MAX DMP</div><h1>LÉOGÂNE ENFO</h1><h2>YON VWA KI RASANBLE NOU</h2><p>Pon ant Léogâne, Florida ak dyaspora a. Nouvèl, kilti, kominote ak opòtinite.</p><a href="#avatar-ai" class="cta">Pale ak Avatar AI a</a></div>
-<div class="avatar-ai-wrap" id="avatar-ai">
-<h3>VIDEO AVATAR — LÉOGÂNE INFO</h3>
-<p class="ai-sub">BONJOUR BONSOIR LÉOGÂNE INFO ÉCOUTEZ-NOUS, C’EST DÉJÀ NOUS AIMER — Poze l kesyon, li ap reponn ou.</p>
-<div class="avatar-bubble" id="avatarBubble">BONJOUR BONSOIR LÉOGÂNE INFO ÉCOUTEZ-NOUS, C’EST DÉJÀ NOUS AIMER — Poze m yon kesyon.</div>
-<div class="avatar-video-frame"><span class="live-dot">● LIVE VIDEO</span><video id="avatarVideo" src="avatar-qa.mp4" autoplay muted loop playsinline preload="auto"></video></div>
-<button id="soundBtn" class="sound-btn" type="button" onclick="toggleVideoSound()">🔊 KLIKE POU TANDE VWA AVATAR LA</button>
-<div class="ai-input-row"><input id="qaInput" type="text" placeholder="Ekri kesyon w la isit la..."><button id="qaBtn" class="ai-btn" type="button">Reponn mwen</button></div>
-<div class="ai-chips"><button type="button" data-qa="contact">📞 Kontak</button><button type="button" data-qa="social">📱 Rezo Sosyal</button><button type="button" data-qa="business">💼 Biznis</button><button type="button" data-qa="culture">🎭 Kilti</button><button type="button" data-qa="about">ℹ️ Kisa LÉOGÂNE ENFO ye?</button></div>
-<div class="avatar-label">✨ VIDEO AVATAR KI AP REPONN KESYON ✨</div>
+<section class="hero"><h1>LÉOGÂNE ENFO</h1><p>YON VWA KI RASANBLE NOU</p></section>
+<div class="avatar-wrap">
+<div class="avatar-bubble" id="avatarBubble">BONJOUR BONSOIR LÉOGÂNE INFO ÉCOUTEZ-NOUS, C’EST DÉJÀ NOUS AIMER</div>
+<div class="avatar-video-frame"><video id="avatarVideo" src="avatar-qa.mp4" autoplay muted loop playsinline></video></div>
+<button id="soundBtn" class="sound-btn" type="button" onclick="toggleVideoSound()">🔊 TANDE VWA A</button>
+<div class="ai-row"><input id="qaInput" type="text" placeholder="Ekri kesyon w la isit la..."><button id="qaBtn" type="button">Reponn mwen</button></div>
 </div>
-</section>
-<section id="news" class="content"><h2>NOUVÈL & ENFÒMASYON</h2><p class="section-subtitle">Nouvèl verifye, analiz ak rapò sou Léogâne, Ayiti ak dyaspora a.</p><div class="grid"><article class="card"><h3>Nouvèl Lokal</h3><p>Enfòmasyon sou lavi ak aktivite kominote Léogâne.</p></article><article class="card"><h3>Nouvèl Dyaspora</h3><p>Enfòmasyon pou kominote ayisyen nan Florida ak lòt kote.</p></article></div></section>
-<section id="culture" class="content"><h2>KILTI & ERITAJ</h2><p>Rara, istwa Léogâne, mizik, tradisyon ak eritaj kiltirèl.</p></section>
-<section id="business" class="content"><h2>ANYÈ BIZNIS</h2><p>Yon espas pou prezante biznis Léoganè Ayiti ak dyaspora a.</p></section>
-<section id="community" class="content"><h2>KOMINOTE</h2><p>Yon platfòm ki rasanble moun Léogâne toupatou nan mond lan.</p></section>
-<section id="social" class="content"><h2>REZO SOSYAL LÉOGÂNE ENFO</h2><p class="section-subtitle">Swiv nou sou rezo sosyal nou yo.</p><div class="social-grid">
-<a class="social tiktok" href="https://www.tiktok.com/@y_me11" target="_blank" rel="noopener"><span class="social-symbol">♪</span><span>TikTok</span></a>
-<a class="social telegram" href="https://t.me/bss1815dmp" target="_blank" rel="noopener"><span class="social-symbol">➤</span><span>Telegram</span></a>
-<a class="social facebook" href="https://www.facebook.com/share/1By3KvYRrM/" target="_blank" rel="noopener"><span class="social-symbol">f</span><span>Facebook</span></a>
-<a class="social instagram" href="https://www.instagram.com/lebaron072/" target="_blank" rel="noopener"><span class="social-symbol">◎</span><span>Instagram</span></a>
-<a class="social whatsapp" href="https://wa.me/14076405166" target="_blank" rel="noopener"><span class="social-symbol">☎</span><span>WhatsApp</span></a>
-<a class="social youtube" href="https://www.youtube.com/@BSS1815PROMAXDMP" target="_blank" rel="noopener"><span class="social-symbol">▶</span><span>YouTube</span></a>
-<a class="social spotify" href="https://open.spotify.com/" target="_blank" rel="noopener"><span class="social-symbol">≋</span><span>Spotify</span></a>
-<a class="social linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener"><span class="social-symbol">in</span><span>LinkedIn</span></a>
-<a class="social xnetwork" href="https://x.com/" target="_blank" rel="noopener"><span class="social-symbol">𝕏</span><span>X</span></a>
-<a class="social truth" href="https://truthsocial.com/" target="_blank" rel="noopener"><span class="social-symbol">T</span><span>Truth Social</span></a>
-</div></section>
-<section id="contact" class="content"><h2>KONTAK LÉOGÂNE ENFO</h2><div class="contact-grid">
-<a class="contact-card" href="tel:+13175381150"><span>🇺🇸 USA</span><strong>(317) 538-1150</strong></a>
-<a class="contact-card" href="tel:+14076405166"><span>🇺🇸 USA / FLORIDA</span><strong>(407) 640-5166</strong></a>
-<a class="contact-card" href="tel:+50944829869"><span>🇭🇹 HAÏTI — MAIN</span><strong>+509 4482-9869</strong></a>
-<a class="contact-card" href="tel:+50942544447"><span>🇭🇹 HAÏTI — MAIN</span><strong>+509 4254-4447</strong></a>
-<a class="contact-card" href="tel:+50943437488"><span>🇭🇹 HAÏTI — MAIN</span><strong>+509 4343-7488</strong></a>
-</div></section>
+<section><h2>NOUVÈL</h2><p>Nouvèl verifye sou Léogâne, Ayiti ak dyaspora a.</p></section>
+<section><h2>KILTI</h2><p>Rara, istwa Léogâne, mizik, tradisyon.</p></section>
+<section><h2>REZO SOSYAL</h2><div class="social"><a href="https://www.tiktok.com/@y_me11">TikTok</a><a href="https://t.me/bss1815dmp">Telegram</a><a href="https://www.facebook.com/share/1By3KvYRrM/">Facebook</a><a href="https://www.instagram.com/lebaron072/">Instagram</a><a href="https://wa.me/14076405166">WhatsApp</a><a href="https://www.youtube.com/@BSS1815PROMAXDMP">YouTube</a></div></section>
+<section><h2>KONTAK</h2><p>USA (317) 538-1150 — Florida (407) 640-5166 — Ayiti +509 4482-9869 / +509 4254-4447 / +509 4343-7488</p></section>
 </main>
-<footer><div class="footer-logo"><img src="léogâne-enfo.png" alt="Logo ofisyèl LÉOGÂNE ENFO" onerror="this.style.display='none'"></div><h2>LÉOGÂNE ENFO</h2><p>YON VWA KI RASANBLE NOU</p><p>BSS1815 PRO-MAX DMP</p><p>© <span id="year">2026</span> LÉOGÂNE ENFO</p><div class="slogan">DEVAN DEVAN NÈT!</div></footer>
+<footer><p>LÉOGÂNE ENFO — BSS1815 PRO-MAX DMP</p><div class="slogan">DEVAN DEVAN NÈT!</div></footer>
 <script>
-let videoSoundOn=false;
-function toggleVideoSound(){
-  const v=document.getElementById("avatarVideo");
-  const b=document.getElementById("soundBtn");
-  if(!v) return;
-  videoSoundOn=!videoSoundOn;
-  v.muted=!videoSoundOn;
-  v.volume=1;
-  if(videoSoundOn){ v.play(); if(b) b.textContent="🔇 KLIKE POU FÈMEN VWA AVATAR LA"; }
-  else { if(b) b.textContent="🔊 KLIKE POU TANDE VWA AVATAR LA"; }
-}
-function showQaAnswer(key){
-  const map={contact:"Ou ka kontakte nou: USA (317) 538-1150 — Florida (407) 640-5166 — Ayiti +509 4482-9869 / +509 4254-4447 / +509 4343-7488. WhatsApp: (407) 640-5166",social:"Swiv nou sou TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP, Spotify, LinkedIn, X ak Truth Social.",business:"Ou gen biznis? LÉOGÂNE ENFO ka prezante l nan Anyè Biznis la. Kontakte nou sou WhatsApp (407) 640-5166 pou w enskri biznis ou.",culture:"Kilti Léogâne: Rara, istwa Léogâne, mizik, tradisyon ak eritaj kiltirèl.",about:"LÉOGÂNE ENFO se pon ant Léogâne, Florida ak dyaspora a. Nouvèl, kilti, kominote ak opòtinite. Yon vwa ki rasanble nou — DEVAN DEVAN NÈT!"};
-  const text=map[key]||"Mèsi pou kesyon w la! Pou repons rapid, rele nou nan (407) 640-5166 oubyen ekri nou sou WhatsApp.";
-  document.getElementById("avatarBubble").textContent=text;
-}
-function answerFromText(t){ t=(t||"").toLowerCase(); if(t.includes("kontak")||t.includes("contact")||t.includes("telefon")||t.includes("phone")||t.includes("whatsapp")) return "contact"; if(t.includes("rezo")||t.includes("social")||t.includes("tiktok")||t.includes("facebook")||t.includes("instagram")||t.includes("youtube")) return "social"; if(t.includes("biznis")||t.includes("business")||t.includes("entreprise")) return "business"; if(t.includes("kilti")||t.includes("culture")||t.includes("rara")||t.includes("mizik")) return "culture"; return "about"; }
-document.getElementById("qaBtn").addEventListener("click",()=>{ const v=document.getElementById("qaInput").value.trim(); if(!v){showQaAnswer("default");return;} showQaAnswer(answerFromText(v)); document.getElementById("qaInput").value=""; });
-document.getElementById("qaInput").addEventListener("keydown",(e)=>{if(e.key==="Enter"){document.getElementById("qaBtn").click();}});
-document.querySelectorAll("[data-qa]").forEach(btn=>{btn.addEventListener("click",()=>showQaAnswer(btn.dataset.qa));});
-const menuToggle=document.getElementById("menuToggle"); const mainNav=document.getElementById("mainNav");
-menuToggle.addEventListener("click",()=>{mainNav.classList.toggle("open");});
-mainNav.querySelectorAll("a").forEach(l=>{l.addEventListener("click",()=>{mainNav.classList.remove("open");});});
-document.getElementById("year").textContent=new Date().getFullYear();
+let on=false;
+function toggleVideoSound(){ const v=document.getElementById("avatarVideo"); const b=document.getElementById("soundBtn"); if(!v) return; on=!on; v.muted=!on; v.volume=1; if(on){ v.play(); b.textContent="🔇 FÈMEN VWA A"; } else { b.textContent="🔊 TANDE VWA A"; } }
+function showQa(key){ const m={contact:"USA (317) 538-1150 — Florida (407) 640-5166 — Ayiti +509 4482-9869 / +509 4254-4447 / +509 4343-7488",social:"TikTok, Telegram, Facebook, Instagram @lebaron072, WhatsApp, YouTube @BSS1815PROMAXDMP",business:"Kontakte nou sou WhatsApp (407) 640-5166 pou biznis ou.",culture:"Kilti Léogâne: Rara, istwa, mizik, tradisyon.",about:"LÉOGÂNE ENFO — Yon vwa ki rasanble nou."}; document.getElementById("avatarBubble").textContent=m[key]||"Mèsi pou kesyon w la! Rele nou nan (407) 640-5166."; }
+function ans(t){ t=(t||"").toLowerCase(); if(t.includes("kontak")||t.includes("contact")||t.includes("phone")||t.includes("whatsapp")) return "contact"; if(t.includes("rezo")||t.includes("social")||t.includes("tiktok")||t.includes("facebook")||t.includes("instagram")) return "social"; if(t.includes("biznis")||t.includes("business")) return "business"; if(t.includes("kilti")||t.includes("culture")||t.includes("rara")) return "culture"; return "about"; }
+document.getElementById("qaBtn").addEventListener("click",()=>{ const v=document.getElementById("qaInput").value.trim(); showQa(ans(v)); document.getElementById("qaInput").value=""; });
+document.getElementById("qaInput").addEventListener("keydown",(e)=>{if(e.key==="Enter") document.getElementById("qaBtn").click();});
 </script>
 <script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
 </html>
