@@ -60,6 +60,8 @@ main{overflow:hidden}
 .avatar-bubble{background:linear-gradient(145deg,#1a0a00,#2d1000);color:var(--gold);font-weight:700;font-size:15px;line-height:1.5;padding:14px 16px;border-radius:14px;border:1px solid var(--orange);margin:0 0 14px;min-height:58px}
 .avatar-video-frame{width:100%;aspect-ratio:1/1;background:#000;border:3px solid var(--orange);border-radius:20px;overflow:hidden;box-shadow:0 0 40px rgba(255,120,0,.35);position:relative}
 .avatar-video-frame video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.sound-btn{cursor:pointer;position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#ffb366,#ff7900);color:#100500;font-weight:900;font-size:14px;border:none;border-radius:30px;padding:11px 20px;box-shadow:0 4px 20px rgba(0,0,0,.5);z-index:3;white-space:nowrap}
+.sound-btn.playing{background:#1ed760;color:#fff}
 .live-dot{position:absolute;top:12px;left:12px;background:#ff2020;color:#fff;font-size:11px;font-weight:900;padding:5px 10px;border-radius:20px;letter-spacing:1px;z-index:2}
 .ai-input-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .ai-input-row input{flex:1;min-width:180px;padding:14px 16px;border-radius:12px;border:1px solid var(--orange);background:#140700;color:#fff;font-size:16px;outline:none}
@@ -134,7 +136,8 @@ footer .slogan{color:var(--orange);font-size:25px;font-weight:900;letter-spacing
       <div class="avatar-bubble" id="avatarBubble" data-i18n="avatarGreeting">Bonjou! Mwen kontan tandé nou, sé renmen nou! ❤️ Poze m yon kesyon.</div>
       <div class="avatar-video-frame">
         <span class="live-dot">● LIVE VIDEO</span>
-        <video id="avatarVideo" src="avatar-qa.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <video id="avatarVideo" src="avatar-qa.mp4" autoplay muted loop playsinline preload="auto" onclick="unmuteAvatar()"></video>
+      <button id="soundBtn" class="sound-btn" type="button" onclick="unmuteAvatar()">🔊 KLIKE POU TANDE VWA A</button>
       </div>
       <div class="ai-input-row">
         <input id="qaInput" type="text" data-i18n-placeholder="questionsPlaceholder" placeholder="Ekri kesyon w la isit la...">
@@ -226,6 +229,17 @@ function speakText(text){
     window.speechSynthesis.speak(u);
   }catch(e){}
 }
+function unmuteAvatar(){
+  const v=document.getElementById("avatarVideo");
+  const b=document.getElementById("soundBtn");
+  if(!v) return;
+  v.muted=false;
+  v.volume=1;
+  v.play();
+  if(b){ b.textContent="🔊 SON LIMEN — AP TANDE"; b.classList.add("playing"); }
+  // Cache bouton an apre 3 segonn pou video a parèt pwòp
+  setTimeout(()=>{ if(b) b.style.display="none"; }, 3000);
+}
 function speakCurrent(){ if(currentAnswer) speakText(currentAnswer); }
 let lastQaKey="";
 function showQaAnswer(key){
@@ -236,7 +250,7 @@ function showQaAnswer(key){
   currentAnswer=text;
   document.getElementById("avatarBubble").textContent=text;
   const v=document.getElementById("avatarVideo");
-  if(v){ v.muted=false; v.play(); }
+  if(v){ v.muted=false; v.volume=1; v.play(); const sb=document.getElementById("soundBtn"); if(sb) sb.style.display="none"; }
   speakText(text);
 }
 function answerFromText(text){
