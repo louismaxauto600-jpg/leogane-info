@@ -147,7 +147,7 @@ const translations = {
 let currentLanguage="ht"; let currentAnswer=""; let soundOn=false;
 const langLabels={ht:"KRE",fr:"FRA",en:"ENG"};
 function changeLanguage(lang){ if(!translations[lang]) return; currentLanguage=lang; document.documentElement.lang=lang; document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n; if(translations[lang][k]) el.textContent=translations[lang][k];}); document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{const k=el.dataset.i18nPlaceholder; if(translations[lang][k]) el.placeholder=translations[lang][k];}); document.querySelectorAll("[data-lang]").forEach(btn=>{btn.classList.toggle("active",btn.dataset.lang===lang);}); if(lastQaKey){ const map={contact:"qaContact",social:"qaSocial",business:"qaBusiness",culture:"qaCulture",about:"qaAbout"}; currentAnswer=translations[currentLanguage][map[lastQaKey]||"qaDefault"]; document.getElementById("avatarBubble").textContent=currentAnswer; } try{localStorage.setItem("leogane-enfo-language",lang);}catch(e){} }
-function speakText(text){ try{ window.speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(text); u.lang="fr-FR"; u.rate=0.85; u.pitch=1.0; const voices=window.speechSynthesis.getVoices?window.speechSynthesis.getVoices():[]; const frVoice=voices.find(v=>(v.lang||"").toLowerCase().startsWith("fr"))||voices.find(v=>(v.name||"").toLowerCase().includes("french")); if(frVoice) u.voice=frVoice; window.speechSynthesis.speak(u); }catch(e){} }
+function speakText(text){ try{ window.speechSynthesis.cancel(); const cleanText = String(text||"").replace(/&/g," et ").replace(/É/g,"E").replace(/È/g,"E").replace(/Ê/g,"E").replace(/Â/g,"A").replace(/Ô/g,"O"); const u=new SpeechSynthesisUtterance(cleanText); u.lang="fr-FR"; u.rate=0.80; u.pitch=1.0; const voices=window.speechSynthesis.getVoices?window.speechSynthesis.getVoices():[]; const frVoice=voices.find(v=>(v.lang||"").toLowerCase().startsWith("fr"))||voices.find(v=>(v.name||"").toLowerCase().includes("french")); if(frVoice) u.voice=frVoice; window.speechSynthesis.speak(u); }catch(e){} }
 function speakCurrent(){ if(currentAnswer) speakText(currentAnswer); }
 function toggleSound(){
   const v=document.getElementById("avatarVideo"); const b=document.getElementById("soundBtn");
@@ -155,7 +155,7 @@ function toggleSound(){
   if(!soundOn){
     soundOn=true;
     try{ window.speechSynthesis.cancel(); }catch(e){}
-    const u=new SpeechSynthesisUtterance("BONJOU & BONSWA LÉOGÂNE ENFO TANDÉ NOU SÉ RENMEN NOU"); u.lang="fr-FR"; u.rate=0.85; u.pitch=1.0;
+    const u=new SpeechSynthesisUtterance("Bonjou et Bonswa Leogane Enfo Tande nou se renmen nou"); u.lang="fr-FR"; u.rate=0.80; u.pitch=1.0;
     const voices=window.speechSynthesis.getVoices?window.speechSynthesis.getVoices():[];
     const frVoice=voices.find(v=>(v.lang||"").toLowerCase().startsWith("fr"))||voices.find(v=>(v.name||"").toLowerCase().includes("french"));
     if(frVoice) u.voice=frVoice;
